@@ -1,0 +1,235 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="icon shortcut" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#34495e">
+    <meta name="msapplication-TileImage" content="assets/icons/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="assets/icons/mstile-70x70.png">
+    <meta name="msapplication-square144x144logo" content="assets/icons/mstile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="assets/icons/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="assets/icons/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="assets/icons/mstile-310x150.png">
+
+    <title>pod - Improve group communication</title>
+
+    <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/landingpage/style.css" rel="stylesheet" type="text/css" />
+
+    <meta name="description" content="pod helps you collaborate with your clubs, causes and teams. Manage projects, assign tasks, create events and communicate effectively from one platform.">
+
+
+    <!-- Modernizr -->
+    <script src="components/landingpage/modernizr-min.js" type="text/javascript"></script>
+
+
+    <!-- Typekit -->
+    <script type="text/javascript">
+      (function(d) {var config = {kitId: 'rml7arq',scriptTimeout: 2000},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
+    </script>
+
+    <!-- <script>
+        (function(f,b,g){
+            var xo=g.prototype.open,xs=g.prototype.send,c;
+            f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+            f._hjSettings={hjid:4972, hjsv:2};
+            function ls(){f.hj.documentHtml=b.documentElement.outerHTML;c=b.createElement("script");c.async=1;c.src="//static.hotjar.com/c/hotjar-4972.js?sv=2";b.getElementsByTagName("head")[0].appendChild(c);}
+            if(b.readyState==="interactive"||b.readyState==="complete"||b.readyState==="loaded"){ls();}else{if(b.addEventListener){b.addEventListener("DOMContentLoaded",ls,false);}}
+            if(!f._hjPlayback && b.addEventListener){
+                g.prototype.open=function(l,j,m,h,k){this._u=j;xo.call(this,l,j,m,h,k)};
+                g.prototype.send=function(e){var j=this;function h(){if(j.readyState===4){f.hj("_xhr",j._u,j.status,j.response)}}this.addEventListener("readystatechange",h,false);xs.call(this,e)};
+            }
+        })(window,document,window.XMLHttpRequest);
+    </script> -->
+
+</head>
+
+<body>
+
+<!-- Start: Header -->
+<div class="header-bar">
+    <div class="row collapse">
+
+        <!-- Logo -->
+        <div class="large-3 medium-3 small-4 columns">
+            <a href="/">
+                <img src="assets/images/pod-logo-wbg.png" width="300" height="184" />
+            </a>
+        </div>
+
+        <div class="small-8 columns medium-8 small-7">
+
+        </div>
+    </div>
+</div>
+<!--  End: Header-->
+
+
+<!-- Start: Hero Area/Section 1 -->
+<div class="hero-area">
+
+    <div id="hero-area-particles">
+
+        <div class="row">
+            <div class="large-12 large-centered medium-10 medium-centered small-12 columns">
+
+                <h1 class="text-center text white faint-shadow">
+                    Artificial intelligence that improves teamwork
+                </h1>
+
+                <!-- <h2 class="text-center text white faint-shadow">
+                    Access groups, manage projects and get organized
+                </h2> -->
+
+                <!-- <div class="row action-row">
+                    <div class="large-3 large-centered medium-6 medium-centered small-9 small-centered columns">
+                        <a id="hero-button" href="#" class="button expand signup border-radius-big small cta-signup" onClick="ga('send', 'event', 'Signup', 'Motion to Signup');" title="Check out the demo">Check out the demo&nbsp;&nbsp;<i class="fa fa-fw fa-youtube-play"></i></a>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="hero-arrow" class="arrow"></div>
+</div>
+<!--   End: Hero Area/Section 1 -->
+
+
+
+<!-- Start: Who's Using Pod Section -->
+<div class="testimonials">
+
+    <div class="row">
+        <div class="large-6 medium-6 small-12 columns">
+            <div class="block text-center">
+                <img class="rounded lazy-loaded-images" data-original="assets/images/testimonials/craig-hunter.jpg" alt="Image of Craig Hunter, CEO of Bitmaker Labs" width="75" height="75">
+                <div class="text onepone black testimonial-name">Craig Hunter</div>
+                <div class="text small grey">CEO @ <a href="http://www.bitmakerlabs.com/" target="_blank" title="Bitmaker Labs">Bitmaker Labs</a></div>
+            </div>
+            <div class="block text-center testimonial-content">
+                Pod has been an asset for Bitmaker Labs; it helps us manage projects, coordinate classes, and communicate with our growing alumni network.
+            </div>
+        </div>
+
+        <div class="large-6 medium-6 small-12 columns">
+            <div class="block text-center">
+                <img class="rounded lazy-loaded-images" data-original="assets/images/testimonials/matt-ross.jpg" alt="Image of Matt Ross, Executive Director of London Youth Advisory Council" width="75" height="75">
+                <div class="text onepone black testimonial-name">Matt Ross</div>
+                <div class="text small grey">Executive Director @ <a href="http://www.lyac.ca/" target="_blank" title="London Youth Advisory Council">London Youth Advisory Council</a></div>
+            </div>
+            <div class="block text-center testimonial-content">
+                Pod is invaluable for managing relationships with a wide variety of community organizations. I'm able to organize everything from one place.
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--   End: Who's Using Pod Section -->
+
+
+
+<!-- Start: Partners Section -->
+<div class="partners">
+    <div class="row">
+        <div class="large-9 large-centered medium-9 medium-centered small-12 small-centered columns item">
+
+            <h3 class="text-center text black">Partners</h3>
+
+            <ul class="large-block-grid-3 medium-block-grid-3 small-block-grid-1">
+                <li>
+                    <a href="http://iion.ca" target="_blank" title="iion is a Partner of pod"><img class="lazy-loaded-images" data-original="assets/images/partners/iion-wo_title-100_75.jpg" alt="iion" title="iion - Innovation Initiatives Ontario North" width="100" height="75"></a>
+                </li>
+
+                <li>
+                    <a href="http://www.oce-ontario.org/" target="_blank" title="Ontario Centres of Ecellence is a Partner of pod"><img class="lazy-loaded-images" data-original="assets/images/partners/oce-100_75.jpg" alt="OCE" title="Ontario Centres of Excellence" width="100" height="75"></a>
+                </li>
+
+                <li>
+                    <a href="http://www.nrc-cnrc.gc.ca/eng/index.html" target="_blank" title="NRC Industrial Research Assistance Program is a Partner of pod"><img class="lazy-loaded-images" data-original="assets/images/partners/nrc-v3-100_75.jpg" alt="NRC" title="NRC Industrial Research Assistance Program" width="100" height="75"></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<!--   End: Partners Section -->
+
+
+
+<!-- Start: Footer Menu -->
+    <div class="sub-nav">
+        <div class="other-links">
+            <span class="text grey tiny lh-one normal"><a class="text tiny lh-one normal" href="mailto:hi@joinpod.com">bryn.david.jones@gmail.com</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <a href="/terms" title="Terms &amp; Conditions - pod" class="text grey blue-hover">Terms</a>
+            <a href="/privacy" title="Privacy - pod" class="text grey blue-hover">Privacy</a> -->
+        </div>
+    </div>
+<!--   End: Footer Menu -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="components/landingpage/scripts.js"></script>
+
+
+        <script>
+            // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            // ga('create', 'UA-51735344-1', 'auto', {'siteSpeedSample': 100});
+            // ga('require', 'displayfeatures');
+            // ga('send', 'pageview');
+
+            $(document).foundation();
+
+            $(document).ready(function() {
+                $('#hero-area-particles').particleground({
+                    minSpeedX: 0.001,
+                    minSpeedY: 0.001,
+                    directionX: 'center',
+                    directionY: 'bottom',
+                    density: 4000,
+                    dotColor: '#70DBDB',
+                    lineColor: '#70DBDB',
+                    particleRadius: 5,
+                    curvedLines: true,
+                    proximity: 40,
+                    parallax: false
+                });
+                $("#video-placeholder").lazyload({effect:"fadeIn"});
+                $(".lazy-loaded-images").lazyload({effect:"fadeIn"});
+
+                $("#hero-button").click(function() {
+                    $('html, body').animate({
+                        scrollTop: ($("#video").offset().top - 80 )
+                    }, 300);
+                });
+
+                // $('#video').on('click',function(){$(this).addClass('flex-video').html('<iframe width="420" height="315" src="//www.youtube.com/embed/MLxlA9cRUlo?rel=0&autoplay=1" frameborder="0" allowfullscreen style="z-index: 1;"></iframe><i class="fa fa-spinner fa-spin fa-3x text grey" style="z-index: 0;"></i>');});
+            });
+
+            // Doorbell code
+            // window.doorbellOptions = { appKey: 'WFoEcq8wJSBsUVxyis8s5jFvCbaw88EBb6P2YQ9qKOdb82BfNNN8cvnmEBxQAdrf'};
+            // (function(d, t) {
+            //     var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://doorbell.io/button/484';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); }(document, 'script'));
+        </script>
+
+</body>
+</html>
