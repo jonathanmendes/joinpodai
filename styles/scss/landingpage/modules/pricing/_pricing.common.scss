@@ -1,0 +1,130 @@
+// Wrapper for the pricing page content wrapper
+.pricing-content-wrapper {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+// Pricing Title
+.pricing-title {
+    margin-bottom: 2rem;
+}
+
+
+// Wrapper for the cost information
+.cost-wrapper {
+    background-color: $yunite-green;
+    max-width: 100px;
+    margin: 0 auto;
+    @include border-radius(3px);
+}
+
+.cost-wrapper-alt {
+    background-color: #EAF5E9;
+    max-width: 100px;
+    margin: 0 auto;
+    @include border-radius(5px);
+    border: 2px solid #9BDF5C;
+}
+
+// Plan title
+.plan-title {
+    padding: 0.25rem 1rem;
+}
+
+// Plan content wrapper - padding
+.plan-content {
+    padding: 1.25rem 1rem 0.5rem 1rem;
+    min-height: 250px;
+}
+
+// Additional spacing between the plan-list-items
+.feature-lists {
+    margin-bottom: 2rem;
+
+    ul {
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
+    }
+}
+
+// Pricing signup button
+#pricing-signup {
+    margin-top: 3rem;
+}
+
+
+// Temp location for new toggle switch
+.plan-options {
+    background-color: #F9F9F9;
+
+    .option {
+        color: #FFF;
+
+        &.first {
+            background-color: $yunite-lightblue;
+            border-bottom: 2px solid darken($yunite-lightblue, 5%);
+            -webkit-border-top-left-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-topleft: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        &.middle {
+            background-color: $yunite-green;
+            border-bottom: 2px solid $yunite-green-hover;
+            padding: 0.425rem 1rem;
+
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-bottom-left-radius: 3px;
+            -webkit-border-bottom-right-radius: 3px;
+            -moz-border-radius-bottomright: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        &.last {
+            background-color: $yunite-lightblue-hover;
+            border-bottom: 2px solid darken($yunite-lightblue-hover, 5%);
+            -webkit-border-top-right-radius: 3px;
+            -webkit-border-bottom-right-radius: 3px;
+            -moz-border-radius-topright: 3px;
+            -moz-border-radius-bottomright: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+
+    .inactive-option {
+        background-color: #CCC;
+        border-bottom: 2px solid #BEBEBE;
+
+        // &:hover {
+        //     background-color: $yunite-lightblue-hover;
+        //     border-bottom: 2px solid $yunite-lightblue-hover;
+        // }
+    }
+
+    // .active-option {
+    //     &:hover {
+    //         background-color: $yunite-green-hover;
+    //         border-bottom: 2px solid $yunite-green-hover;
+    //     }
+    // }
+
+}
+
+// Feature lists styling
+.feature-lists {
+    background-color: #F9F9F9;
+
+    .highlighted {
+        background-color: #EAF5E9;
+    }
+
+}

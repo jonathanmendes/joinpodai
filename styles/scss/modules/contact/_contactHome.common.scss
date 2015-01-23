@@ -1,0 +1,373 @@
+.contacts-home {
+
+    // Contact Card styling
+    .contact-card {
+        padding: 0 1rem;
+        margin-bottom: 1.25rem;
+        border-bottom: none;
+
+        // Border-top for priority color on contact card
+        &.priority-border {
+            &.three {
+                border-top: 2px solid $yunite-warning;
+            }
+            &.two {
+                border-top: 2px solid $yunite-green;
+            }
+            &.one {
+                border-top: 2px solid $yunite-lightblue-hover;
+            }
+        }
+
+        // Profile section
+        .contact-profile {
+            border-right: 1px solid #E5E5E5;
+            padding-bottom: 0.75rem;
+            padding-top: 1rem;
+
+            // Image/Prirority circle
+            img, .profile-priority {
+                display: block;
+                margin: 0 auto;
+                max-width: 50px;
+                max-height: 50px;
+                height: 50px;
+            }
+
+            // Priority circle styling
+            .profile-priority {
+                background-color: #9C9C9C;
+                color: #FFFFFF;
+                display: block;
+                font-size: 1.5rem;
+                padding-top: 1rem;
+                min-height: 46px;
+                min-width: 46px;
+                text-align: center;
+                @include border-radius(50%);
+
+                &.three { background-color: $yunite-warning; }
+                &.two { background-color: $yunite-green; }
+                &.one { background-color: $yunite-lightblue-hover; }
+            }
+
+            // Contact Name
+            .name {
+                @extend .text.blue;
+                display: inline-block;
+                font-size: 1.1rem;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+
+            // Hover state for profile section
+            &:hover, &:focus {
+                // background-color: $yunite-background-notification-blue;
+                background-color: #F2F8FA;
+                cursor: pointer;
+            }
+
+            // Priorirty level
+            .priority-level {
+                border-right: 1px solid #E5E5E5;
+                display: inline-block;
+                margin-right: 0.25rem;
+                padding-right: 0.5rem;
+                font-weight: 700;
+
+                &.one { color: $yunite-lightblue-hover; }
+                &.two { color: $yunite-green; }
+                &.three { color: $yunite-warning; }
+                &.none { @extend .text.grey; }
+            }
+
+            .email-number {
+                // margin: 0.5rem 0;
+
+                .email, .number {
+                    @extend .text.small;
+                    @extend .text.darkgrey;
+                    display: block;
+                    margin: 0.5rem 0 0.25rem;
+                }
+                .email {
+                    .copy {
+                        display: none;
+                        .fa {
+                            display: none !important;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    &:hover, &.focus {
+                        .copy {
+                            display: inline-block;
+
+                            .fa {
+                                display: inline-block !important;
+                            }
+                            &:hover, &:focus {
+                                @extend .text.blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Last interaction
+            .last-interaction {
+                margin-top: 0.25rem;
+                @extend .text.grey;
+
+                .fa {
+                    margin-left: 0.25rem;
+                    margin-right: 0.25rem;
+                }
+            }
+        }
+
+        &.none {
+            .contact-profile {
+                border-bottom: none;
+            }
+        }
+
+        // Inline labels
+        .inline-labels {
+            @extend .global-label;
+        }
+
+        // Contact Lists
+        .contact-lists {
+            border-top: 1px solid #E5E5E5;
+            padding-top: 0.5rem;
+            padding-bottom: 0.375rem;
+            width: 100%;
+
+            .contact-list {
+                @extend .global-label-list;
+            }
+
+            .contact-label {
+                @extend .global-label;
+            }
+
+            .more {
+                color: #8D8D8D;
+                cursor: pointer;
+                float: right;
+                font-size: 0.85rem;
+                margin: 0.25rem 0 0.25rem 0.25rem;
+                padding: 0.375rem 0.5rem 0.25rem;
+                @include border-radius(3px);
+
+                &:hover, &:focus {
+                    background-color: #E2E2E2;
+                    color: $yunite-lightblue-hover;
+                }
+            }
+
+            .dismiss {
+                padding-top: 0.25rem;
+            }
+        }
+
+        // Contact actions section
+        .contact-actions {
+
+            // Contact action buttons
+            .contact-action,
+            .actns-full .columns {
+                @extend .text.grey;
+                cursor: pointer;
+                display: block;
+                font-size: 0.8rem;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                @include no-text-select();
+            }
+
+
+            .contact-action-column {
+                // Contact Action button content
+                .contact-action {
+                    &.history {
+                        .requiring-update-value {
+                            line-height: 1;
+                            @include border-radius(50%);
+                        }
+                    }
+                }
+
+                // Hover states
+                &:hover, &:focus, &.active {
+                    cursor: pointer;
+                    background-color: $yunite-lightblue-hover;
+
+                    .contact-action {
+                        color: #FFF !important;
+                    }
+                }
+            }
+
+            // Full actions section - for Desktop and tablet
+            .actns-full {
+                @include no-text-select();
+
+                .note {
+                    &:hover, &:focus {
+                        color: #FFFFFF;
+                        background-color: $yunite-note-yellow;
+                    }
+                }
+                .task {
+                    &:hover, &:focus {
+                        color: #FFFFFF;
+                        background-color: $yunite-alert;
+                    }
+                }
+                .event {
+                    &:hover, &:focus {
+                        color: #FFFFFF;
+                        background-color: $yunite-lightblue-hover;
+                    }
+                }
+            }
+
+
+            // Class for highlighting the 'Upcomings' notification section
+            .upcomings {
+                background-color: $yunite-background-notification-red;
+
+                .upcoming { color: $yunite-alert; }
+            }
+
+            //
+           .actns-full .columns,
+           .contact-action-column {
+                border-right: 1px solid #E5E5E5;
+
+                &.last {
+                    border-right: none;
+                }
+            }
+        }
+
+        // General Styling for pending-update and upcoming-notification sections
+        .pending-update-notification, .upcoming-notification {
+            line-height: 1.4;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        // Pending Update notification area styling
+        .pending-update-notification {
+            @extend .text.small;
+            border-top: 1px solid #E5E5E5;
+            background-color: $yunite-background-notification-yellow;
+            color: $yunite-warning;
+        }
+
+        // Upcoming notification area styling
+        .upcoming-notification {
+            border-top: 1px solid #E5E5E5;
+            background-color: $yunite-background-notification-red;
+
+            ul {
+                margin-bottom: 0;
+
+                li {
+                    @extend .text.small;
+                    color: $yunite-alert;
+                }
+            }
+        }
+
+        // Pending and upcoming
+        &.pending, &.upcoming {
+            .contact-action-column {
+                &.last {
+                    &:hover, &:focus {
+                        background-color: $yunite-alert;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+
+        // Recent History area
+        .recent-history {
+            border-top: 1px solid #E5E5E5;
+            padding-top: 1.5rem;
+        }
+
+        // Timeline styling
+        #timeline {
+            margin: 0.5rem 1rem 1rem 6rem;
+            border-left: 1px solid $yunite-lightblue;
+
+            .history-item {
+                margin: 1.25rem 0;
+                position: relative;
+                list-style-type: none;
+
+                .relative {
+                    .date-time {
+                        @extend .text.blue;
+                        @extend .text.bold;
+                        margin-top: -0.75rem;
+                        top: 50%;
+                        left: -5.5rem;
+                        font-size: 0.8em;
+                        line-height: 1.4;
+                        position: absolute;
+                        text-align: right;
+                    }
+                    .circle {
+                        margin-top: -1rem;
+                        top: 50%;
+                        left: -0.55rem;
+                        width: 1rem;
+                        height: 1rem;
+                        background: #48b379;
+                        border: 4px solid #FFF;
+                        border-radius: 50%;
+                        display: block;
+                        position: absolute;
+                    }
+                    .type {
+                        display: block;
+                        margin-top: -0.9rem;
+                        top: 50%;
+                        left: -0.85rem;
+                        width: 1.625rem;
+                        height: 1.625rem;
+                        font-size: 1rem;
+                        line-height: 1;
+                        background: #FFF;
+                        border-radius: 50%;
+                        position: absolute;
+                        text-align: center;
+
+                        .fa {
+                            line-height: 1.625rem;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+                .content {
+                    border-color: #eee9dc;
+                    padding-left: 1.5rem;
+                    padding-top: 0.75rem;
+
+                    p {
+                        font-size: 0.9rem;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+}

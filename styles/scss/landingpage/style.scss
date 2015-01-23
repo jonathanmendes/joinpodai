@@ -1,0 +1,33 @@
+// Pod Home Page Styles
+
+
+// Import Foundation
+@import 'foundation';
+
+
+// Impot mixins
+@import 'mixins';
+
+
+// Import Variables
+@import 'variables';
+
+
+// Custom-minified animations
+// @import 'animations-min';
+
+
+// General Styles
+@import 'modules/global/general';
+
+
+// Button Styles
+@import 'modules/global/buttons';
+
+
+// Doorbell Styling
+@import 'modules/global/doorbell';
+
+
+// Home Page Styling
+@import 'modules/home/home.common';

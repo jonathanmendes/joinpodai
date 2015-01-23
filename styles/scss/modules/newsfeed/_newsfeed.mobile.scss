@@ -1,0 +1,14 @@
+.newsfeed-list {
+    .news-item {
+        .news-content {
+            width: 84%;
+        }
+    }
+}
+
+.newsfeed-card {
+    .newsfeed-list {
+        max-height: 260px;
+        overflow: auto;
+    }
+}

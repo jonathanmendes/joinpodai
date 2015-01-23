@@ -1,0 +1,1059 @@
+// Desktop
+@media only screen and (min-width: 1025px){
+	.mobile-only {
+		display:none !important;
+	}
+}
+
+// Tablet screens
+@media only screen and (min-width: $mediaMobile) and (max-width: $mediaDesktop){
+	.desktop-only {
+		display: none !important;
+	}
+}
+
+// Mobile screens
+@media only screen and (max-width: $mediaMobile){
+	.desktop-only {
+		display: none !important;
+	}
+}
+
+
+// Webkit scrollbar styling
+::-webkit-scrollbar {
+	background-color: #DDD;
+	border-radius: 4px;
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+
+// Text selection colors
+::selection {
+  background: #CBE8FA; // WebKit/Blink Browsers
+}
+::-moz-selection {
+  background: #CBE8FA; // Gecko Browsers
+}
+
+
+.scrollable {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+body {
+	background-color: $yunite-background-grey;
+	margin: 0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	overflow: hidden;
+	overflow-y: auto;
+	cursor: auto;
+}
+
+*, html, body, div, p, i, strong, input, a, blockquote, h1, h2, h3, h4, h5, h6, button, .button {
+	font-family: $sans-serif;
+}
+
+
+a, .button, button, input[type="submit"], .cursor, .link, .action {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+// !text-select class
+.no-select {
+	@include no-text-select();
+}
+
+.selectable {
+    -moz-user-select: text !important;
+    -khtml-user-select: text !important;
+    -webkit-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+// Center an object within another responsively
+.absolute-center {
+	@include responsive-center();
+}
+
+// Cursor-none
+.auto-cursor {
+	cursor: auto !important;
+}
+.default-cursor {
+	cursor: default !important;
+}
+
+// For breaking single long words based on content width
+.break-word {
+	text-wrap: unrestricted;
+    word-wrap: break-word;
+}
+.white-space {
+	white-space: normal;
+}
+
+// Border-boxx
+.border-box {
+    -ms-box-sizing: border-box; /* ie8 */
+    -khtml-box-sizing: border-box; /* konqueror */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    box-sizing: border-box; /* css3 rec */
+}
+
+// Block classes
+.block {
+	display: block;
+
+	&.inline {
+		display: inline-block;
+	}
+
+	&.center {
+		margin: 0 auto;
+	}
+
+	&.top {
+		vertical-align: top;
+	}
+}
+
+// Margin classes
+.m {
+	&.top {
+		&.one {
+			margin-top: 1rem;
+		}
+	}
+}
+
+.hidden, .hide {
+	display: none !important;
+}
+.show {
+	display: block;
+
+	&.inline-block {
+		display: inline-block;
+	}
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
+.align-middletop {
+	vertical-align: top;
+}
+
+// Aliging content - middle
+.align-middle {
+	vertical-align: middle;
+}
+
+// Aliging content - middle
+.align-bottom {
+	vertical-align: bottom;
+}
+
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+
+// Text classes
+.text {
+	&.lightgrey{
+		color: #D7D7D7;
+	}
+	&.grey {
+		color: #A4A4A4;
+	}
+	&.darkgrey {
+		color: #8D8D8D;
+	}
+	&.white {
+		color: #FFFFFF;
+	}
+	&.black {
+		color: #000000;
+	}
+	&.black-hover {
+		&:hover, &:focus {
+			color: #000000;
+		}
+	}
+	&.lightblue {
+		color: $yunite-lightblue;
+	}
+	&.lightblue-hover {
+		&:hover {
+			color: $yunite-lightblue;
+		}
+	}
+	&.blue {
+		color: $yunite-lightblue-hover;
+	}
+	&.blue-hover {
+		&:hover {
+			color: darken($yunite-lightblue-hover, 5%);
+		}
+	}
+	&.green {
+		color: $yunite-green;
+	}
+	&.green-hover {
+		&:hover {
+			color: darken($yunite-green, 7.5%);
+		}
+	}
+	&.warning {
+		color: $yunite-warning;
+	}
+	&.warning-hover {
+		&:hover, &:focus {
+			color: darken($yunite-warning, 7.5%);
+		}
+	}
+	&.alert {
+		color: $yunite-alert;
+		margin: 0;
+		padding: 0;
+	}
+	&.alert-hover {
+		&:hover, &:focus {
+			color: darken($yunite-alert, 7.5%);
+		}
+	}
+	&.gold {
+		color: $yunite-gold;
+	}
+	&.gold-hover {
+		&:hover, &:focus {
+			color: darken($yunite-gold, 7.5%);
+		}
+	}
+	&.purple {
+		color: $yunite-purple;
+	}
+	&.purple-hover {
+		&:hover {
+			color: darken($yunite-purple, 7.5%);
+		}
+	}
+	&.sidebar-blue {
+		color: #128AB6;
+	}
+	&.tinyer {
+		font-size: 0.625rem;
+		line-height: 1.4;
+	}
+	&.tiny {
+		font-size: 0.75rem;
+		line-height: 1.4;
+	}
+	&.small {
+		font-size: 0.8125rem;
+		line-height: 1.4;
+	}
+	&.one {
+		font-size: 1rem;
+	}
+	&.onepone {
+		font-size: 1.1rem;
+	}
+	&.oneptwo {
+		font-size: 1.2rem;
+	}
+	&.medium {
+		font-size: 0.95rem;
+		line-height: 1.4;
+	}
+	&.large {
+		font-size: 1.25rem;
+	}
+	&.massiv-bruh {
+		font-size: 1.618rem;
+	}
+	&.bold {
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+	&.underline {
+		text-decoration: underline;
+	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	&.lh-one {
+		line-height: 1;
+	}
+	&.lh-oneptwo {
+		line-height: 1.2;
+	}
+	&.lh-onepfour {
+		line-height: 1.4;
+	}
+	&.italic {
+		font-style: italic;
+	}
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.newlines {
+	white-space: pre-line;
+}
+
+
+// Image classes
+img {
+	&.circle {
+		@include border-radius(50%);
+	}
+	&.rounded {
+		@include border-radius(2px);
+	}
+	&.twenty {
+		height: 20px;
+		width: 20px;
+	}
+	&.thirty {
+		height: 30px;
+		width: 30px;
+	}
+	&.sixty {
+		width: 60px;
+		height: 60px;
+	}
+	&.tenrem {
+		width: 10rem;
+		height: 10rem;
+	}
+}
+
+
+.background-lightyellow {
+	background-color: $yunite-background-notification-yellow;
+}
+.bkg-white {
+	background-color: #FFF;
+
+	&.twenty-p {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+}
+.bkg-lightgrey {
+	background-color: #F4F4F4;
+}
+.bkg-blue {
+	background-color: $yunite-background-topbar;
+}
+.bkg-lightgreen {
+	background-color: #EAF5E9;
+}
+.bkg-lightgreen-hover:hover {
+	background-color: #EAF5E9;
+}
+.bkg-lightblue {
+	background-color: rgb(216, 239, 255);
+}
+
+
+// Reusable borders
+.light-border-bottom {
+	border-bottom: 1px solid #E9E9E9;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.light-border-top {
+	border-top: 1px solid #E9E9E9;
+}
+
+
+// Additions to Foundation's Panel class
+.panel {
+	@include border-radius(3px);
+
+	&.white-background {
+		background-color: #FFFFFF;
+		border: 1px solid #E6E6E6;
+		@include border-radius(4px);
+	}
+
+	// Cards Styling
+	&.card {
+		background-color: #FEFEFE;
+		border: 1px solid #F5F5F5;
+		// @include single-box-shadow(rgba(0, 0, 0, 0.0375), 0px, 2px, 3px, 0px, false);
+
+		.actions-margin-top {
+			margin-top: 1.5rem !important;
+		}
+
+		&.lesser-padding {
+			padding: 1rem 1.25rem;
+		}
+
+		&.lesser-b-padding {
+			padding-bottom: 0.5rem !important;
+		}
+
+		&.creation-card {
+			border: none;
+			padding: 0.125rem 0.75rem 1rem;
+		    -webkit-border-top-left-radius: 0;
+		    -webkit-border-top-right-radius: 0;
+		    -moz-border-radius-topleft: 0;
+		    -moz-border-radius-topright: 0;
+		    border-top-left-radius: 0;
+		    border-top-right-radius: 0;
+
+		    height: 63px;
+		    -webkit-transition: height 0.3s ease-out;
+		       -moz-transition: height 0.3s ease-out;
+		         -o-transition: height 0.3s ease-out;
+		            transition: height 0.3s ease-out;
+
+		            &.expanded {
+		            	&.task {
+			            	height: auto;
+		            	}
+
+		            	&.event {
+		            		height: auto;
+		            	}
+
+		            	&.discussion {
+		            		height: auto;
+		            	}
+		            }
+
+		    label, .label {
+		    	font-size: 0.65rem;
+		    }
+
+		    .creation-form {
+		    	-webkit-transition: transform 0.3s ease-out 0.2s;
+		    	   -moz-transition: transform 0.3s ease-out 0.2s;
+		    	     -o-transition: transform 0.3s ease-out 0.2s;
+		    	        transition: transform 0.3s ease-out 0.2s;
+
+		    	.ng-hide-remove { -webkit-animation:fadeIn 1.2s; animation:fadeIn 1.2s; }
+		    	.ng-hide-add-active { -webkit-animation:fadeOut 1.2s; animation:fadeOut 1.2s; display: block !important;}
+		    	.ng-hide { display: none !important; }
+
+		    	&.padded {
+		    		transform: translate3d(0px, 10px, 0px);
+		    		padding-bottom: 10px;
+		    	}
+		    }
+		}
+
+		&.inline-edit {
+			-webkit-transition: all 0.6s ease-out;
+			   -moz-transition: all 0.6s ease-out;
+			     -o-transition: all 0.6s ease-out;
+			        transition: all 0.6s ease-out;
+		}
+	}
+}
+
+
+// Styling for the Group Block
+// Description: The group's first letter in a colored block.
+.group-block {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.25rem;
+	background-color: $yunite-green;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+	@include border-radius(3px);
+
+	&.thirty {
+		font-size: 18px;
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+
+	&.small {
+		font-size: 12px;
+		height: 20px;
+		line-height: 20px;
+		width: 20px;
+	}
+
+	&.tiny {
+		font-size: 10px;
+		height: 15px;
+		line-height: 15px;
+		width: 15px;
+	}
+}
+
+
+// Link styling
+.link {
+	cursor: pointer;
+	text-decoration: underline;
+
+	&:hover, &:focus {
+		color: $yunite-green-hover;
+	}
+
+	&.no-underline {
+		text-decoration: none;
+	}
+
+	&.minor {
+		&:hover, &:focus {
+			background-color: $yunite-background-notification-blue;
+		}
+	}
+
+	&.cancel-action {
+		display: inline-block;
+		margin-left: 2rem;
+		@extend .text.grey;
+
+		&:hover, &:focus {
+			color: $yunite-alert;
+		}
+	}
+}
+
+
+// Additions to Foundation's Button class
+button,.button, input[type="submit"] {
+	transition: all 300ms ease-out;
+	@include border-radius(2px);
+
+	&.inline-button {
+		height: 2.3125rem;
+		padding: 0.5rem 1.5rem;
+	}
+
+	&.special-inline-button {
+		height: 1.4rem;
+		padding: 0.125rem 0.5rem 0;
+	}
+
+	&.collapse-button {
+		width: 100%;
+		padding: 0.5rem 0 0 0;
+		height: 2.4rem
+	}
+	&.label-space {
+		margin-top: 1.125rem;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	&.uppercase {
+		text-transform: uppercase;
+	}
+
+	&.grey {
+		background-color: #E6E6E6;
+		border-bottom: 2px solid darken(#E6E6E6, 10%);
+		color: #707070;
+
+		&:hover, &:focus {
+			background-color: darken(#E6E6E6, 10%);
+		}
+	}
+
+	&.no-margin {
+		margin-bottom: 0;
+	}
+
+	&.tinier {
+		font-size: 0.78571rem;
+		height: auto;
+		padding: 0.25rem 1rem 0.375rem;
+	}
+
+	&.attending-button {
+		padding: 0.25rem 0.75rem 0.25rem 0.625rem;
+
+		.fa {
+			color: #FFF !important;
+		}
+	}
+
+	&.comment-button,
+	&.box-button {
+		background-color: #E7E7E7;
+		color: #999;
+		height: 35px;
+		width: 40px;
+		padding: 11px 10px;
+		top: 0;
+
+		-webkit-border-top-right-radius: 2px;
+		-webkit-border-bottom-right-radius: 2px;
+		-moz-border-radius-topright: 2px;
+		-moz-border-radius-bottomright: 2px;
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+
+		&.disabled:hover, &.disabled:focus, &[disabled]:hover, &[disabled]:focus {
+			background-color: #E7E7E7;
+			color: #999;
+		}
+
+		&.sendable {
+			color: $yunite-lightblue-hover;
+
+			&:hover {
+				color: $yunite-lightblue-hover;
+			}
+		}
+	}
+}
+
+// Icon button
+.icon-button {
+	background-color: #E6E6E6;
+	color: #777;
+	font-size: 1rem;
+	height: 2.4rem;
+	padding: 0.7rem;
+	text-align: center;
+	width: 2.75rem;
+	@include border-radius(2px);
+
+	&.starred {
+		&.active, &:hover, &:focus {
+			background-color: #F7F7CE;
+			color: $yunite-gold;
+		}
+	}
+
+	&.decision {
+		&.active, &:hover, &:focus {
+			background-color: #E9F6DA;
+			color: $yunite-green;
+		}
+	}
+
+	&.active {
+		&:hover, &:focus {
+			background-color: #E6E6E6;
+			color: #777;
+		}
+	}
+}
+
+.fake-button {
+	border: 2px solid #DADADA;
+	padding: 0 0.25rem 0.125rem;
+
+	@include border-radius(4px);
+
+	&.green {
+		border-color: $yunite-green;
+	}
+	&.blue-hover {
+		&:hover, &:focus {
+			border-color: $yunite-lightblue-hover;
+		}
+	}
+}
+
+
+
+// Input Field Styling
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="file"], input[type="checkbox"], input[type="radio"], select, textarea {
+	padding: 0.4rem 0.5rem;
+	height: 2.4rem;
+	@include border-radius(2px);
+
+	&.lesser-margin {
+		margin-bottom: 0.4rem;
+	}
+	&.no-margin {
+		margin-bottom: 0;
+	}
+}
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
+	cursor: pointer;
+}
+textarea {
+	max-width: 100%;
+	line-height: 1.4;
+}
+.collapse-input-button {
+	input {
+		border-right: none;
+		// - Upper and Lower Right border-radius
+		-webkit-border-top-right-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
+		-moz-border-top-right-radius: 0;
+		-moz-border-bottom-right-radius: 0;
+		-ms-border-top-right-radius: 0;
+		-ms-border-bottom-right-radius: 0;
+		-o-border-top-right-radius: 0;
+		-o-border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.button {
+		border-bottom: 2px solid #E6E6E6;
+		-webkit-border-top-left-radius: 0;
+		-webkit-border-bottom-left-radius: 0;
+		-moz-border-top-left-radius: 0;
+		-moz-border-bottom-left-radius: 0;
+		-ms-border-top-left-radius: 0;
+		-ms-border-bottom-left-radius: 0;
+		-o-border-top-left-radius: 0;
+		-o-border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+
+		&:hover, &:focus {
+			border-bottom: 2px solid #cdcdcd;
+		}
+	}
+}
+// Custom file-upload button section & button styling
+.file-upload-buttons {
+	display: block;
+
+	.file-upload {
+		display: block;
+		margin-bottom: 0 !important;
+
+		input.upload {
+			@extend .no-select;
+			display: block;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			top: 0;
+		}
+	}
+
+	// Remove file button
+	.remove-file {
+		@extend .text.grey;
+		@extend .text.bold;
+		@extend .cursor;
+		display: block;
+		text-align: center;
+		margin-top: 1rem !important;
+
+		&:hover, &:focus {
+			@extend .text.alert;
+		}
+	}
+}
+.has-tip {
+	font-weight: normal !important;
+}
+
+
+// Gradient Buttons Styling
+@import 'modules/globals/gradientButton';
+
+
+// Form Stylings
+// Label and Input Note shared styles
+label, .input-note {
+	color: #929292;
+	display: block;
+	font-size: 0.75rem;
+	@extend .no-select;
+}
+// Label Styling
+label {
+	&.inline-label {
+		display: inline-block;
+		color: #777;
+		font-size: 1rem;
+		vertical-align: middle;
+	}
+	// required text
+	.required {
+		color: $yunite-warning;
+	}
+}
+// Inline form label styling
+.inline-label {
+	@extend .text.small;
+	@extend .text.grey;
+	@extend .block.inline;
+	@extend .align-middle;
+}
+// Inline input styles
+.inline-input {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+
+	&.quarter {
+		width: 25%;
+	}
+	&.half {
+		width: 50%;
+	}
+}
+// For leaving notes beneath form elements
+.input-note {
+	color: #777;
+	margin: -0.75rem 0 1.25rem;
+}
+// Inline checkbox styling
+.inline-checkbox {
+	@extend .block.inline;
+	margin: 0 0 !important;
+	vertical-align: middle;
+}
+// Custom checkbox styling
+.custom-checkbox {
+	@extend .cursor;
+	@extend .text.bold;
+	@extend .text.grey;
+	@extend .text.medium;
+	margin: 0.75rem 0 1rem;
+	@include no-text-select();
+
+	&:hover, &:focus {
+		color: #777;
+	}
+}
+// Custom Styling for required inputs
+.required-input-field {
+	.fa {
+		@extend .no-select;
+		position: absolute;
+		right: 1.75rem;
+		top: 1.85rem;
+	}
+	.signup-password {
+		.password-icon {
+			right: 0.75rem;
+			top: 0.75rem;
+		}
+		.exception {
+			top: 0;
+			right: 0;
+			position: relative;
+		}
+	}
+	.required-input {
+		padding-right: 2rem !important;
+	}
+
+	// when there isn't a label for the error messages
+	&.no-label {
+		.fa {
+			top: 0.75rem;
+		}
+	}
+}
+
+
+// Input error box for displaying ~beneath~ fields
+.input-error-box {
+	background-color: #FFFAEF;
+	border: 1px solid #FFE5BD;
+	color: #DA8F19;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.4;
+	margin-bottom: 1rem;
+	padding: 0.5rem 0.75rem;
+	@include border-radius(3px);
+}
+// Input error message for displaying ~within~ labels
+.input-error-message {
+	@extend .text.warning;
+	@extend .text.small;
+}
+// MS
+input:-ms-input-placeholder {
+	color: #CCC;
+	font-style: italic;
+	font-size: 0.9rem;
+}
+
+
+// Actions Generalized Styling
+.actions {
+	border-top: 1px solid #ECECEC;
+	margin: 0.5rem 0;
+	padding: 0;
+
+	// For applying no border
+	&.no-border {
+		border-top: 0;
+		margin: 0 0 0.5rem 0;
+		padding: 0;
+	}
+
+	// Styling used for app/tool home views single card actions
+	// jah feel?
+	&.home-actions {
+		@extend .text.small;
+		margin-bottom: 0;
+
+		.action {
+			display: inline-block;
+			margin-top: 0.75rem;
+			vertical-align: middle;
+
+			.fa {
+				margin-right: 0.125rem;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+
+	// Single action general styling
+	.action {
+		@extend .text.grey;
+		display: inline-block;
+		margin: 1rem 1.75rem 0 0;
+
+		&.lg {
+			@extend .text.lightgrey;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.star, .upvote {
+		&:hover, &:focus {
+			color: $yunite-gold;
+		}
+	}
+	.unstar, .downvote {
+		&:hover, &:focus {
+			color: $yunite-alert;
+		}
+	}
+	.create-task, .decision, .green {
+		&:hover, &:focus {
+			color: $yunite-green;
+		}
+	}
+	.edit {
+		&:hover, &:focus {
+			color: $yunite-lightblue;
+		}
+	}
+	.delete, .red {
+		&:hover, &:focus {
+			color: $yunite-alert;
+		}
+	}
+	// Override the actions colors darkening button hover text
+	.button, button {
+		&:hover, &:focus {
+			color: #FFFFFF;
+		}
+	}
+}
+
+
+// deep vaginas have this
+.bottom-inner-box-shadow {
+  -webkit-box-shadow:   inset 0px -3px 6px rgba(0, 0, 0, 0.2);
+	 -moz-box-shadow:   inset 0px -3px 6px rgba(0, 0, 0, 0.2);
+		box-shadow:     inset 0px -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+// Global Label/Tag styling
+.global-label-list {
+    display: inline-block;
+    vertical-align: middle;
+}
+.global-label {
+    color: #ACACAC;
+    background-color: #E7E7E7;
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 0 0.25rem;
+    padding: 0.25rem 0.5625rem 0.375rem 0.5rem;
+    @include border-radius(2px);
+    @include no-text-select();
+
+    &:hover, &:focus {
+        background-color: $yunite-lightblue-hover;
+        color: #FFF;
+        cursor: pointer;
+    }
+}
+
+
+// Switch Styling
+@import 'modules/globals/switch';
+
+// Tooltip styling
+@import 'modules/globals/tooltip';
+
+// TSpacing classes
+@import 'modules/globals/margins';
+@import 'modules/globals/padding';
+
+// Filter Dropdowns
+@import 'modules/globals/filters';
+
+// Animate.css
+@import 'modules/globals/animate';
+
+// Tabs
+@import 'modules/globals/tabs';
+
+// Toggle Button
+@import 'modules/globals/toggle-button';
+
+// Assigned-to and Attendees list list
+@import 'modules/globals/assignees-attendees-list';
+
+// Doorbell custom styling
+@import 'modules/globals/doorbell';

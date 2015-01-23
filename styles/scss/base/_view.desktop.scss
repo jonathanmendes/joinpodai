@@ -1,0 +1,8 @@
+#tool-view, #loader-view {
+	left: $sidebarWidth;
+
+    &.sidebar-hidden-desktop {
+        left: 0px !important;
+        width: 100% !important;
+    }
+}

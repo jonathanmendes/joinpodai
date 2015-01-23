@@ -1,0 +1,30 @@
+.simpleColorPicker {
+	padding: 0.25rem;
+	background-color: #FFF;
+	@include border-radius(2px);
+
+	.simpleColorPickerSelector {
+		display: inline-block;
+
+		.simpleColorPickerChoice {
+			height: 20px;
+			line-height: 1rem;
+			margin-right: 0.375rem;
+			width: 20px;
+			@include border-radius(4px);
+		}
+
+		.selected-color {
+			color: #FFF;
+			height: 14px;
+			line-height: 1;
+			margin-top: 5px;
+			width: 14px;
+			-webkit-animation: 0.3s zoomIn;
+					animation: 0.3s zoomIn;
+		}
+
+	}
+}
+
+

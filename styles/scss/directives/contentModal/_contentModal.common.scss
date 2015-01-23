@@ -1,0 +1,57 @@
+.content-modal {
+    height: auto;
+    max-height: auto;
+    max-width: 1000px;
+
+    .data-card {
+        border: none;
+        padding: 0 13px 0 0;
+        margin: 0;
+    }
+
+    .hide-for-modal {
+        display: none;
+    }
+
+    // Event Specific Styles
+    .event {
+
+        //Attendees List
+        .dropdown-data {
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .comments-wrapper {
+            border-top: 1px solid #ECECEC;
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+        }
+    }
+
+
+    .color-picker-wrapper {
+        width: 190px;
+        margin: 0.25rem auto 0;
+    }
+
+
+    &.pod-create-form, &.pod-view {
+
+        .pod-create-wrapper, .pod-view-wrapper {
+            padding: 1rem;
+        }
+
+        .pod-create-success, .pod-view-success {
+            background-color: green;
+            background-color: rgba(0, 134, 12, 0.60);
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 9993;
+            @include border-radius(3px);
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.button.border-radius {
+    border-radius: 2px;
+}
+.button.border-radius-big {
+    border-radius: 4px;
+}
+
+.button {
+    &.full-width {
+        width: 100%;
+    }
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.signup {
+    background: #FFA500;
+    background: -webkit-linear-gradient(#FFA500, #DF9206);
+    background: -o-linear-gradient(#FFA500, #DF9206);
+    background: linear-gradient(#FFA500, #DF9206);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{FFA500}', endColorstr='#{DF9206}');
+    border-bottom: 2px solid #CC8B00;
+
+    &:hover, &:focus {
+        background: #CE862C;
+        background: -webkit-linear-gradient(#CE862C, #CE862C);
+        background: -o-linear-gradient(#CE862C, #CE862C);
+        background: linear-gradient(#CE862C, #CE862C);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{CE862C}', endColorstr='#{CE862C}');
+        border-bottom: 2px solid #CE862C;
+    }
+}
+.signup-top {
+    background-color: #FFB42A;
+    background: #FFB42A;
+    border-bottom: 2px solid #EBA000;
+    color: #FFF !important;
+
+    &:hover, &:focus {
+        background-color: orange;
+        background: orange;
+        border-bottom: 2px solid orange;
+        color: #FFF !important;
+    }
+}
+
+.button.but {
+    background: #6DCDE9;
+    background: -webkit-linear-gradient(#6DCDE9, #5AC0DD);
+    background: -o-linear-gradient(#6DCDE9, #5AC0DD);
+    background: linear-gradient(#6DCDE9, #5AC0DD);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{6DCDE9}', endColorstr='#{5AC0DD}');
+    border-bottom: 2px solid #52B6D3;
+    color: #FFFFFF !important;
+}
+.button.but:hover,
+.button.but:focus {
+    background: #52B6D3;
+    background: -webkit-linear-gradient(#52B6D3, #52B6D3);
+    background: -o-linear-gradient(#52B6D3, #52B6D3);
+    background: linear-gradient(#52B6D3, #52B6D3);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{52B6D3}', endColorstr='#{52B6D3}');
+    border-bottom: 2px solid #52B6D3;
+}

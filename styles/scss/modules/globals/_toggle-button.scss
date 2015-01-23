@@ -1,0 +1,90 @@
+.toggle-button {
+    background-color: #CCC;
+    border-bottom: 1px solid #BBB;
+    color: #555;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    margin-right: 0.75rem;
+    padding: 0.25rem 0.625rem 0.375rem;
+    vertical-align: top;
+    @include border-radius(3px);
+
+    .fa {
+        line-height: 1;
+        font-size: 0.6rem;
+        margin-left: 0.375rem;
+    }
+
+    &.note {
+        background-color: #EFEFEF;
+        border-bottom: none;
+        margin-right: 0;
+
+        &:hover {
+            background-color: #EFEFEF;
+            color: #555;
+        }
+    }
+
+    &.active {
+        background-color: $yunite-green;
+        color: #FFF;
+        border-bottom-color: darken($yunite-green, 7.5%);
+    }
+
+    &.search {
+        border-bottom: none;
+        height: 22.75px;
+        margin-right: 0;
+        padding: 0;
+
+        input, input[type="text"] {
+            border: 2px solid #CCC;
+            color: #000;
+            font-size: 0.8rem;
+            height: 1.6rem;
+            margin-bottom: 0;
+            padding: 0.4rem 0.25rem;
+
+        }
+
+        &.active {
+            input, input[type="text"] {
+                border-color: $yunite-green;
+            }
+        }
+
+    }
+    &.search-button {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        height: 1.6rem;
+
+        .fa {
+            font-size: 0.6rem;
+            vertical-align: middle;
+            margin-left: 0;
+        }
+
+        &:hover {
+            background-color: $yunite-green;
+            border-bottom-color: darken($yunite-green, 7.5%);
+        }
+    }
+
+    &:hover {
+        background-color: #CCC;
+        color: #555;
+    }
+
+    &:hover {
+        background-color: #555;
+        border-bottom-color: #000;
+        color: #FFF;
+    }
+}

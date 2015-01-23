@@ -1,0 +1,192 @@
+$calendar-width: 800px;
+$calendar-height: 400px;
+$calendar-border: #EEE;
+
+$task-header-bg: #ECE2FF;
+$task-content-bg: #FBF5FF;
+$event-header-bg: #DBECCA;
+$event-content-bg: #F0FFF0;
+
+.month-year-picker {
+	position: fixed;
+	bottom: -10px;
+	z-index: 101;
+	margin-left: 10px;
+
+	select {
+		width: 90px;
+		font-size: 0.9rem;
+		padding: 4px;
+	}
+	.button {
+		padding: 10px !important;
+	}
+}
+
+.calendar-sidebar-container {
+	-webkit-transform: translate3d(0, 0, 0);
+	width: 340px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 99;
+	overflow: hidden;
+	max-width: 340px;
+	background-color: #FFFFFF;
+	border-left: 1px solid #E6E6E6;
+	// @include single-box-shadow(rgba(0, 0, 0, 0.0375), 0px, 0px, -3px, 0px, false);
+
+	.calendar-sidebar {
+		float: right;
+		width: 100%;
+
+		.sidebar-actions {
+			height: 30px;
+
+			.columns {
+				background-color: $yunite-lightblue-hover;
+				@include background-image(linear-gradient($cta-blue-start, $cta-blue-end));
+				color: #FFFFFF;
+
+				&:hover, &:focus {
+					background-color: $yunite-green;
+					@include background-image(linear-gradient($cta-blue-hover, $cta-blue-hover));
+				}
+
+				&:first-child {
+					border-right: 1px solid #85CEE7;
+				}
+			}
+		}
+
+		.day-head {
+			background-color: #F4FCFF;
+			color: #666;
+		}
+
+		#inner-calendar-container {
+			overflow: auto;
+		}
+
+		.sidebar-card {
+			background-color: #F5F5F5;
+			color: #4E4E4E;
+			border-bottom: 1px solid #D3D3D3;
+
+			.member {
+				display: inline-block;
+				float: left;
+				margin-right: 4px;
+			}
+
+			.sidebar-card-head {
+				padding: 0.25rem 0.5rem;
+				color: #FFFFFF;
+
+				&.task {
+					background-color: $task-header-bg;
+					color: #8752A5;
+				}
+
+				&.event {
+					background-color: $event-header-bg;
+					color: #36883A;
+				}
+
+				.fa {
+					vertical-align: middle;
+				}
+			}
+
+			&.task {
+				.sidebar-card-content {
+					background-color: $task-content-bg;
+				}
+			}
+
+			&.event {
+				.sidebar-card-content {
+					background-color: $event-content-bg;
+				}
+			}
+
+			&:hover, &:focus {
+				&.task {
+					.sidebar-card-head {
+						background-color: #D5CAEC;
+					}
+				}
+
+				&.event {
+					.sidebar-card-head {
+						background-color: #BBDD9A;
+					}
+				}
+			}
+
+			&.data-card {
+				.expand-note, .assignees-list-small, .project-name, .tags-short, .recurrence-type , .task-actions, .comments-link, .show-more-link, .card-action {
+					margin-top: 0.25rem !important;
+				}
+				.show-more-link {
+					margin-left: 0.5rem !important;
+				}
+			}
+
+			.sidebar-map {
+				margin-left: auto;
+				margin-right: auto;
+
+				img {
+					width: 100%;
+					@include border-radius(2px);
+				}
+
+				.event-home-map {
+					float: none;
+				}
+			}
+		}
+
+	}
+}
+
+
+
+.calendar-content {
+	.day {
+		background-color: #FFF;
+		z-index: 97;
+		float: left;
+		width: 14.285%;
+		border-left: 1px solid $calendar-border;
+		border-top: 1px solid $calendar-border;
+		padding-bottom: 12.5%;
+		position: relative;
+		margin-top: 0;
+		margin-bottom: 0;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.day-current {
+		background-color: $yunite-background-notification-blue !important;
+		box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.125) inset;
+	}
+
+	.day-prev {
+		background-color: #F7F7F7;
+		box-shadow:0 -5px 7px -5px rgba(0, 0, 0, 0.05) inset;
+	}
+
+	.day-next {
+		background-color: #F7F7F7;
+		box-shadow:0 5px 7px -5px rgba(0, 0, 0, 0.05) inset;
+	}
+
+	.day-today {
+		background-color: #FFF4DD;
+		box-shadow:0 0 5px 0 rgba(0,0,0,0.125) inset;
+	}
+}

@@ -1,0 +1,45 @@
+// Discussions Home
+.discussions-home {
+    .data-card.discussion-card {
+        padding: 0.5rem 1rem 0.75rem;
+
+        .body {
+            margin-bottom: 0.25rem !important;
+        }
+    }
+}
+
+// Comments List Styling for Decisions
+.comments-list {
+    .comment {
+        .comment-decision {
+            background-color: $yunite-background-notification-yellow;
+            border-left: 2px solid #FAE9CA;
+            border-right: 2px solid #FAE9CA;
+            padding-top: 1rem;
+
+            .decision-note {
+                @extend .text.small;
+                @extend .text.bold;
+                @extend .text.warning;
+                margin-bottom: 0.75rem;
+            }
+        }
+    }
+}
+
+
+.expanded-discussion-title {
+    max-width: 854px;
+    min-width: 265px;
+    width: 88%;
+
+    .required-input-field {
+        position: relative;
+
+        .fa {
+            top: 0.75rem;
+            right: 0.75rem;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.token-picker-container {
+	display: block;
+}
+
+.token-picker {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	background-color: white;
+	font-family: inherit;
+	border: 2px solid #e6e6e6;
+	box-shadow: none;
+	color: rgba(0, 0, 0, 0.75);
+	display: inline-block;
+	width: 100%;
+	font-size: 1rem;
+	margin: 0 0;
+	padding: 0.57143rem;
+	padding-top:0.4rem;
+	padding-bottom : 0rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	@include border-radius(2px);
+
+	.token-input {
+		display: block !important;
+		float: left;
+		border: none !important;
+		background-color: transparent !important;
+		width: 30% !important;
+		margin: 0 0 !important;
+		height: auto !important;
+		padding: 3px !important;
+		padding-bottom: 0.6rem !important;
+	}
+}
+
+// Global styling for tokens/tags, existing tags (dropdown) and selected tags
+.token,
+.tag,
+.tag-existing,
+.tag-selected {
+	@extend .text.small;
+	@extend .text.blue;
+	background-color: #EAF7FC;
+	border: 1px solid #BFE3EE;
+	float: left;
+	margin-bottom: 0.4rem;
+	margin-right: 0.5rem;
+	padding: 0.125rem 0.25rem 0.2rem 0.5rem;
+	@include border-radius(3px);
+
+	.fa {
+	    cursor: pointer;
+	    margin-left: 0.5rem;
+	}
+
+	&:hover, &:focus {
+	    @extend .cursor;
+	    @extend .text.blue;
+	    background-color: #BFE6F1;
+	    border: 1px solid #75C8E4;
+
+	    .fa {
+	        color: $yunite-lightblue-hover;
+
+	        &:hover, &:focus {
+	            color: $yunite-alert;
+	        }
+	    }
+	}
+
+	&.no-hover {
+		&:hover, &:focus {
+			cursor: auto;
+			background-color: #EAF7FC;
+			border: 1px solid #BFE3EE;
+		}
+	}
+
+	&.no-close {
+		padding-right: 0.5rem;
+	}
+}
+
+// Existing tag styling
+.tag-existing {
+	margin-top: 0.25rem;
+	margin-bottom: 0.125rem;
+	margin-right: 2%;
+	width: 48%;
+}
+
+// Selected and hovered-tag styling
+.tag-selected,
+.tag-existing:hover,
+.tag-existing:focus {
+	@extend .cursor;
+	@extend .text.blue;
+	background-color: #BFE6F1;
+	border: 1px solid #75C8E4;
+}
+
+
+// For displaying the tags on data-cards
+.all-tags {
+    padding-top: 0;
+
+    .tag-list {
+        line-height: 2rem;
+
+        .tag {
+        	float: none;
+        	display: inline-block;
+        	vertical-align: middle;
+			margin-bottom: 0;
+        }
+    }
+}

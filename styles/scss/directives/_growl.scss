@@ -1,0 +1,133 @@
+.growl {
+    position: relative;
+    top: 72px;
+    right: 10px;
+    float: right;
+    width: 280px;
+    z-index: 2000;
+}
+
+.growl-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.growl-item.ng-enter {
+    -webkit-animation: zoomIn 0.9s;
+    -moz-animation: zoomIn 0.9s;
+    -o-animation: zoomIn 0.9s;
+    animation: zoomIn 0.9s;
+}
+
+.growl-item.ng-leave {
+    -webkit-animation: zoomOut 0.9s;
+    -moz-animation: zoomOut 0.9s;
+    -o-animation: zoomOut 0.9s;
+    animation: zoomOut 0.9s;
+}
+
+.growl-item.ng-enter,
+.growl-item.ng-leave.ng-leave-active {
+    opacity:0;
+}
+.growl-item.ng-leave,
+.growl-item.ng-enter.ng-enter-active {
+    opacity:1;
+
+}
+
+.alert {
+    line-height: 1.2;
+	padding: 0.5rem 1rem 0.75rem 0.75rem;
+
+    @include border-radius(3px);
+    // @include single-box-shadow(rgba(0, 0, 0, 0.0375), 0px, 2px, 3px, 0px, false);
+
+    .close {
+        background-color: transparent;
+        font-size: 1.25rem;
+        line-height: 1;
+        margin: 0 0;
+        padding: 0 0;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+
+    .success-icon, .error-icon {
+        display: none;
+    }
+
+    .support-link {
+        display: none;
+    }
+}
+
+.alert-success {
+    $growl-success: #B7E7C1;
+    background-color: $growl-success;
+    border: 1px solid darken($growl-success, 5%);
+
+    div {
+        color: darken($growl-success, 47%);
+    }
+
+    .close {
+        color: darken($growl-success, 47%);
+    }
+
+    .success-icon {
+        display: inline-block;
+    }
+}
+
+.alert-danger {
+    $growl-error: #FFDADA;
+    background-color: $growl-error;
+    border: 1px solid darken($growl-error, 2%);
+
+
+    div {
+        color: darken($growl-error, 55%);
+    }
+
+    .close {
+        color: darken($growl-error, 55%);
+    }
+
+    .error-icon {
+        display: inline-block;
+    }
+    .support-link {
+        display: block;
+    }
+}
+
+.alert-warning {
+    $growl-warning: #F3DBAF;
+    background-color: $growl-warning;
+    border: 1px solid darken($growl-warning, 2%);
+
+    div {
+        color: darken($growl-warning, 50%);
+    }
+
+    .close {
+        color: darken($growl-warning, 50%);
+    }
+}
+
+// Tablet screens
+@media only screen and (min-width: $mediaMobile) and (max-width: $mediaDesktop){
+    .growl{
+        padding-top:30px !important;
+    }
+}
+
+// Mobile screens
+@media only screen and (max-width: $mediaMobile){
+    .growl{
+        padding-top:30px !important;
+    }
+}
+

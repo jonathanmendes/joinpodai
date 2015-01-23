@@ -1,0 +1,296 @@
+#tool-view {
+    background-color: $yunite-background-grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    &.lighter-bg {
+        background-color: #FCFCFC;
+    }
+}
+    // General container for the tool/app view
+    .view-container {
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+
+        &.no-overflow {
+            overflow: hidden;
+        }
+    }
+
+        // Data Card
+        // Description: Used for generalized styling of single data cards on the single views, create/edit views and home/list views.
+        // e.g. Single discussion card; Preview cards
+        .data-card {
+            .title {
+                @extend .text.blue;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: #ececec;
+                cursor: pointer;
+                font-size: 1.5rem;
+                line-height: 1.2;
+                margin-top: 0;
+                margin-bottom: 0.625rem;
+                min-height: 34px;
+                padding-bottom: 0.25rem;
+                @extend .break-word;
+
+                .name {
+                    &:hover, &:focus {
+                        color: $yunite-green;
+                    }
+                }
+
+                &.no-hover {
+                    .name {
+                        &:hover, &:focus {
+                            @extend .text.blue;
+                        }
+                    }
+                }
+
+                &.no-border {
+                    border: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+            .by-at {
+                @extend .text.small;
+                @extend .text.grey;
+                margin-bottom: 0.5rem;
+            }
+
+            .recurrs-data, .date-data, .time-data, .date-time-data {
+
+                .data-text {
+                    font-weight: 500;
+                    color: #555;
+                }
+            }
+
+            .body {
+                margin-bottom: 0.625rem;
+                @extend .break-word;
+
+                p {
+                    margin-bottom: 0.5rem;
+                    @extend .break-word;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .placeholder {
+                color: #AAA;
+                font-style: italic;
+            }
+
+            .dropdown-data {
+                border-top: 1px solid #E6E6E6;
+                margin-top: 0.25rem;
+            }
+
+            .additional-link {
+                @extend .text.small;
+                @extend .text.grey;
+                @extend .cursor;
+                @extend .block.inline;
+                @extend .align-middle;
+                border: 1px solid transparent;
+                height: 21px;
+                min-height: 21px;
+                max-height: 21px;
+                margin: 0.375rem 1.25rem 0 0;
+                padding: 0.125rem 0;
+                @include no-text-select();
+
+                &.padded {
+                    padding: 0.125rem 0;
+                }
+
+                &.rounded {
+                    @include border-radius(2px);
+                }
+
+                &.last-item {
+                    margin-right: 0 !important;
+                }
+
+                &.black {
+                    color: #000;
+                }
+
+                // specifics
+                &.tags-short {
+                    padding: 0.125rem 0.5rem;
+
+                    &:hover, &:focus, &.active {
+                        border: 1px solid $yunite-lightblue;
+                        background-color: lighten($yunite-lightblue, 20%);
+                        color: $yunite-lightblue-hover;
+                    }
+                }
+                &.project-name {
+                    height: 21px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .project-name {
+                @extend .block.inline;
+                @extend .text.white;
+                background: #CCC;
+                background-color: #CCC;
+                border: 1px solid transparent;
+                font-size: 0.85rem;
+                padding: 0.125rem 0.5rem 0.2rem;
+                margin-bottom: 0.5rem;
+                @include border-radius(2px);
+
+                &:hover, &:focus {
+                    opacity: 0.75;
+                }
+
+                &.no-hover {
+                    &:hover, &:focus {
+                        opacity: 1;
+                    }
+                }
+
+                &.big {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0;
+                    padding: 0.25rem 0.9rem 0.375rem 0.75rem;
+                }
+            }
+
+            .inline-label + .project-name {
+                margin-top: 1.25rem !important;
+                padding: 0.125rem 0.5rem 0.25rem 0.375rem;
+                vertical-align: middle;
+                font-size: 0.9rem;
+            }
+        }
+
+        // Scroll to top bottom
+        .scroll-to-top {
+            background-color: rgba(255, 255, 255, 0.75);
+            border: 1px solid #E7E7E7;
+            bottom: 5px;
+            font-size: 0.95rem;
+            position: fixed;
+            right: 20px;
+            padding: 0.5rem 0.75rem;
+            @include border-radius(3px);
+        }
+
+        .section-title {
+            @extend .text.small;
+            @extend .text.grey;
+            @include border-bottom(1px, solid, #ECECEC, 0.5rem, 0.5rem);
+
+            &.no-border {
+                @include border-bottom(0, none, none, 0.5rem, 0.5rem);
+            }
+            &.no-spacing {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .optional-title {
+            @extend .text.small;
+            @extend .text.darkgrey;
+            margin: 1.5rem 0;
+
+            &.action {
+                @extend .link.no-underline;
+                @extend .cursor;
+
+                &:hover, &:focus {
+                    color: $yunite-green;
+                }
+            }
+        }
+
+
+    // Login and Signup pages shared styles
+    .login, .signup {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+
+        // Placeholder text styling
+        // ::-webkit-input-placeholder { font-style: italic; }
+        // :-moz-placeholder { font-style: italic; }
+        // ::-moz-placeholder { font-style: italic; }
+        // :-ms-input-placeholder { font-style: italic; }
+    }
+
+
+    // Login page specific styles
+    .login {
+
+        // Container for the login buttons
+        // .login-buttons {
+        //     margin-bottom: 1rem;
+
+        //     // To reduce padding between Social buttons
+        //     .column, .columns {
+        //         padding-left: 0.325rem;
+        //         padding-right: 0.325rem;
+        //     }
+        // }
+
+        // Social Buttons styling
+        // .social-button {
+        //     padding: 0.875rem 1rem;
+        //     width: 100%;
+
+        //     &.google {
+        //         background-color: #DD4B39;
+
+        //         &:hover, &:focus { background-color: darken(#DD4B39, 15%); }
+        //     }
+        //     &.facebook {
+        //         background-color: #3B5998;
+
+        //         &:hover, &:focus { background-color: darken(#3B5998, 15%); }
+        //     }
+        //     &.linkedin {
+        //         background-color: #55ACEE;
+
+        //         &:hover, &:focus { background-color: darken(#55ACEE, 15%); }
+        //     }
+        //     &.github {
+        //         background-color: $yunite-purple;
+
+        //         &:hover, &:focus { background-color: darken($yunite-purple, 15%); }
+        //     }
+        // }
+
+
+        // Container for the 'Remember Me' & 'Forgot your password' section
+        .remember-forgot-section {
+            margin-bottom: 1rem;
+
+            .remember {
+                input[type="checkbox"],
+                label {
+                    display: inline-block;
+                    height: auto;
+                    margin: 0;
+                    padding: 0;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+    }

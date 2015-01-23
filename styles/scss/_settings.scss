@@ -1,0 +1,61 @@
+/*##################################################################################
+
+Name: _settings.scss
+Purpose: Maintains variables for use in all scss files, color variables are
+stored in colors.scss. Mixins must be stored in mixins.scss
+
+##################################################################################*/
+
+// Media Queries
+$mediaDesktop : 1024px; //64em;
+$mediaMobile : 40em;
+
+// Sidebar
+$sidebarWidth: 240px;
+
+// Groups dropdown menu height (mobile and tablet)
+// $topbarHeight: 60px;
+$topbarHeight: 50px;
+$topbarHeightSmall: 50px;
+$groupsDropdownHeight: 40px;
+// $groupsDropdownHeight: 40px;
+
+// Logo
+$logoWidth: 119px;
+
+// Font Family
+$sans-serif: "rooney-sans", sans-serif;
+
+
+/* -----------------------------------------------------------------------------
+
+    z-index Index
+    -------------
+
+    #loader-view (/base/_loader.common): 9000
+
+    #mobile-sidebar-toggle: (/base/_sidebar.common) 7500
+    #mobile-group-block (/base/_sidebar.common): 7000
+
+    .right-sidebar (/directives/_rightSidebar): 6000
+    .right-sidebar .success-state (/directives/_rightSidebar): 5900
+
+    #sidebar-view (/base/_sidebar.tablet && /base/sidebar.mobile): 5000
+    .sidebar-loader (/base/_sidebar.common): 4900
+    .sidebar-contents (/base/_sidebar.common): 4800
+
+    #notifications-block (/directives/_notifications): 4000
+    .notifications-circle (/directives/_notifications): 3900
+
+    .growl (/modules/globals/_growl.scss): 2000
+
+    .tooltip (/modules/globals/_tooltip.scss): 1000
+
+    Calendar stuff: left alone
+
+    .selected .image .fa (/modules/tasks/_taskCreate.common.scss): 200
+
+    _jttDateTime (/directives/jttDateTime.scss): 100 & 101
+    .project-card (podView.html) & chat-entry-box (/modules/project/_projectCommon.common): 100
+
+----------------------------------------------------------------------------- */

@@ -1,0 +1,46 @@
+.profile-hover-card {
+    padding-top:0.2rem;
+    overflow:hidden;
+    height:65px;
+    .hover-loader{
+        position:absolute;
+        height:60px;
+        width:275px;
+        background-color:#FFF;
+        text-align:center;
+        padding-top:15px;
+        color:#d8d8d8;
+        @include single-transition(opacity,300ms);
+        display:block;
+        opacity:1.0;
+        z-index:10;
+    }
+
+    .profile-image, .profile-info {
+        @extend .block.inline;
+        vertical-align: top;
+    }
+    .profile-image {
+        cursor: pointer;
+        margin-right: 15px;
+    }
+    .profile-info {
+        width: 180px;
+    }
+    .name {
+        @extend .text.blue;
+        cursor: pointer;
+        font-size: 1.125rem;
+        margin: 0 0 0.25rem;
+
+        &:hover, &:focus {
+            color: $yunite-green;
+        }
+    }
+    .email, .number {
+        cursor: text;
+        display: block;
+        line-height: 1.4;
+        font-size: 0.9rem;
+    }
+}

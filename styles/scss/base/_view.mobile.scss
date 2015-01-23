@@ -1,0 +1,32 @@
+#tool-view {
+	left: 0;
+
+    .view-container {
+        padding-top: 0;
+    }
+
+    // Login & Signup shared styles
+    .login, .signup {
+        margin-top: 1rem;
+
+        // Add spacing to the po lil button
+        .lonely-button {
+            margin-top: 2rem;
+        }
+
+        // Signup/login section
+        .account {
+            float: none;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+
+    // Login page specific styles
+    .login {
+        // Remember/Forgot section
+        .remember-forgot-section {
+            font-size: 0.7rem !important;
+        }
+    }
+}

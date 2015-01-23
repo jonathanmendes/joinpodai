@@ -1,0 +1,49 @@
+/*##################################################################################
+
+Name: _mixins.scss
+Purpose: All custom mixins are stored in this file. Keep in mind that compass already
+includes many useful mixins.
+
+##################################################################################*/
+
+// Compass Imports
+@import "compass/css3/images";              // Background images & Gradients
+@import "compass/css3/border-radius";       // Border Radius
+@import "compass/css3/transition";          // Transitions bruh
+@import "compass/css3/box-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/user-interface";
+
+// Responsive Centering
+@mixin responsive-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// Border-bottom Mixin
+@mixin border-bottom($size, $style, $color, $margin-bottom, $padding-bottom) {
+    border-bottom-width: $size;
+    border-bottom-style: $style;
+    border-bottom-color: $color;
+    margin-bottom: $margin-bottom;
+    padding-bottom: $padding-bottom;
+}
+
+// No-Text-Select Mixin
+@mixin no-text-select() {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Truncate
+@mixin truncate() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

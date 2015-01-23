@@ -1,0 +1,11 @@
+.content-modal {
+    height: 80%;
+
+    &.pod-create-form {
+        height: 125px !important;
+    }
+
+    &.pod-view {
+        height: auto;
+    }
+}

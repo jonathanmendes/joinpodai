@@ -1,0 +1,321 @@
+// particleground override
+.pg-canvas {
+    position: absolute!important;
+}
+
+
+// Scrolling Gradient
+@-webkit-keyframes scrollingGradient {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@-moz-keyframes scrollingGradient {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@-o-keyframes scrollingGradient {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@keyframes scrollingGradient {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+
+/* Start: Home Page Styling */
+
+    /* General Section Styles */
+    // .section-note {
+    //     color: #9c9c9c;
+    //     font-size: 0.8rem !important;
+    //     margin-bottom: 0 !important;
+    //     padding-bottom: 2rem !important;
+    //     text-align: center;
+    // }
+    // .cta-signup {
+    //     border-bottom: 2px solid #CC8B00;
+    //     max-width: 280px;
+    //     padding-left: 3rem;
+    //     padding-right: 3rem;
+    //     display: block;
+    //     margin: 0 auto;
+    //     float: none !important;
+    //     font-size: 1rem !important;
+    //     font-weight: bold;
+    //     text-align: center;
+    //     cursor: pointer;
+    // }
+
+
+    /* Start: Hero Section */
+    .hero-area {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        overflow: hidden !important;
+
+        // Previous purple: 24C6DC -> 514a9d
+        background: -webkit-linear-gradient(180deg, #1EB9CE 10%, #268BB3 90%); /* Chrome 10+, Saf5.1+ */
+        background:    -moz-linear-gradient(180deg, #1EB9CE 10%, #268BB3 90%); /* FF3.6+ */
+        background:     -ms-linear-gradient(180deg, #1EB9CE 10%, #268BB3 90%); /* IE10 */
+        background:      -o-linear-gradient(180deg, #1EB9CE 10%, #268BB3 90%); /* Opera 11.10+ */
+        background:         linear-gradient(180deg, #1EB9CE 10%, #268BB3 90%); /* W3C */
+
+        // background: linear-gradient(180deg, #24c6dc, #514a9d);
+        background-size: 400% 400%;
+
+        -webkit-animation: scrollingGradient 120s ease infinite;
+        -z-animation: scrollingGradient 120s ease infinite;
+        -o-animation: scrollingGradient 120s ease infinite;
+        animation: scrollingGradient 120s ease infinite;
+
+
+        h1, h2, h3 {
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .row {
+            padding: 7.5rem 0 5rem;
+
+            &.action-row {
+                margin-top: 0 !important;
+                padding-top: 2rem;
+            }
+        }
+
+        .arrow {
+            background-color: #FFFFFF;
+            border-top: 1px solid #FFFFFF;
+            bottom: -20px;
+            height: 20px;
+            max-width: 100%;
+            position: absolute;
+            width: 100%;
+        }
+        .arrow:before, .arrow:after{
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            width: 50%;
+            height: 20px;
+            background-color: inherit;
+            overflow-x: hidden;
+        }
+        .arrow:before{
+            right: 50%;
+            -ms-transform-origin: 100% 100%;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            -ms-transform: skewX(50deg) ;
+            -webkit-transform: skewX(50deg) ;
+            transform: skewX(50deg) ;
+        }
+        .arrow:after{
+            left: 50%;
+            -ms-transform-origin: 0 100%;
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -ms-transform: skewX(-50deg) ;
+            -webkit-transform: skewX(-50deg);
+            transform: skewX(-50deg) ;
+        }
+    }
+
+    .hero-area .faint-shadow {
+        text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
+    }
+    /*   End: Hero Section */
+
+
+    /* Start: Video Section */
+    .video-section {
+        text-align: center;
+        max-width: 100%;
+        padding: 3rem 0 3rem;
+
+        #video-placeholder {
+            border: 6px solid #E5E5E5;
+        }
+
+        .fa-youtube-play,
+        .fa-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .cta-signup {
+            margin-top: 2rem;
+        }
+
+        .flex-video {
+            background-color: #E5E5E5;
+        }
+    }
+    /*   End: Video Section */
+
+
+
+    /* Start: Testimonials Section */
+    .testimonials {
+        // border-top: 1px solid #ECECEC;
+        margin-top: 0;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+
+        .testimonial-name {
+            margin: 1rem 0 0;
+        }
+
+        .testimonial-content {
+            margin: 0.5rem 0 3rem;
+            padding: 0 1.5rem;
+            color: #808080;
+
+            &:before {
+                content: "\f10d";
+                font-family: FontAwesome;
+                color: #E6E6E6;
+            }
+        }
+    }
+    /*   End: Testimonials Section */
+
+
+
+    /* Start: Partners Section */
+    .partners {
+      background: #FFFFFF;
+      border-top: 1px solid #ECECEC;
+      max-width: 100%;
+      padding: 3rem 0;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+    }
+    .partners img {
+        display: block;
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+    /*   End: Partners Section */
+
+/*   End: Home Page Styling */
+
+
+/* Start: Media Queries */
+
+// Mobile Sizing
+@media only screen and (max-width: 40em) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .header-bar {
+        height: 4rem;
+        position: relative;
+
+        img {
+            margin: 0.5rem auto 0;
+            padding-left: 0.5rem;
+        }
+
+        .link-row {
+            padding-top: 1.25rem;
+
+            &.page-links {
+                padding-top: 0.75rem;
+            }
+
+            .columns {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .single-page .page-area {
+        padding-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .hero-area {
+        top: -1rem;
+
+        .row {
+            padding: 4rem 0 4.5rem;
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            &.action-row {
+                margin-top: 0 !important;
+                padding-top: 1.5rem;
+            }
+        }
+    }
+
+    .video-section {
+        padding: 2rem 0 3rem;
+    }
+
+    .header-bar .alignment {
+        float: none !important;
+    }
+
+    .sub-nav dt a, .sub-nav dd a, .sub-nav li a {
+        padding: 0.1875rem 0.5rem;
+    }
+
+    .tab-block .inner-tab-block {
+        min-height: 95px;
+    }
+
+}
+
+// Medium Screens
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .single-page .page-area {
+        padding-top: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    .hero-area {
+        .row {
+            padding: 7rem 0 5rem;
+
+            &.action-row {
+                margin-top: 0 !important;
+                padding-top: 1.5rem !important;
+            }
+        }
+    }
+
+    .tab-block .inner-tab-block {
+        min-height: 80px;
+    }
+}
+//  End: Media Queries

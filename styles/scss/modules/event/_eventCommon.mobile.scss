@@ -1,0 +1,21 @@
+// Mobile styles for Event cards
+.event {
+
+	// Add some margin to the switch
+	.switch-row {
+		margin-top: 1.5rem;
+	}
+}
+
+.event-card {
+    margin-left: auto;
+    margin-right: auto;
+
+    .show-more-link {
+        margin-bottom: 0.75rem;
+    }
+}
+
+.event-home-map {
+    float: left;
+}

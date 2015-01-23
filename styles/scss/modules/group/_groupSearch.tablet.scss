@@ -1,0 +1,26 @@
+.group-search{
+    .search-result{
+        height: 86px;
+
+        .search-result-square {
+            width: 70px;
+        }
+
+        .search-result-name {
+            width: 54%;
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .search-result-request {
+            width: 30%;
+        }
+    }
+
+    .search-result-last {
+        height: 70px;
+    }
+
+}

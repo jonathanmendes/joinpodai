@@ -1,0 +1,51 @@
+// Gradient Buttons
+.gradient-button {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+
+    &.green {
+        border-bottom-color: $cta-green-border-bottom;
+        @include background-image(linear-gradient($cta-green-start, $cta-green-end));
+
+        &:hover, &:focus {
+            border-bottom-color: $cta-green-hover;
+            @include background-image(linear-gradient($cta-green-hover, $cta-green-hover));
+        }
+    }
+    &.blue {
+        border-bottom-color: $cta-blue-border-bottom;
+        @include background-image(linear-gradient($cta-blue-start, $cta-blue-end));
+
+        &:hover, &:focus {
+            border-bottom-color: $cta-blue-hover;
+            @include background-image(linear-gradient($cta-blue-hover, $cta-blue-hover));
+        }
+    }
+    &.lightblue {
+        border-bottom-color: $cta-lightblue-border-bottom;
+        @include background-image(linear-gradient($cta-lightblue-start, $cta-lightblue-end));
+
+        &:hover, &:focus {
+            border-bottom-color: $cta-lightblue-hover;
+            @include background-image(linear-gradient($cta-lightblue-hover, $cta-lightblue-hover));
+        }
+    }
+    &.red {
+        border-bottom-color: $cta-red-border-bottom;
+        @include background-image(linear-gradient($cta-red-start, $cta-red-end));
+
+        &:hover, &:focus {
+            border-bottom-color: $cta-red-hover;
+            @include background-image(linear-gradient($cta-red-hover, $cta-red-hover));
+        }
+    }
+    &.orange {
+        border-bottom-color: $cta-orange-border-bottom;
+        @include background-image(linear-gradient($cta-orange-start, $cta-orange-end));
+
+        &:hover, &:focus {
+            border-bottom-color: $cta-orange-hover;
+            @include background-image(linear-gradient($cta-orange-hover, $cta-orange-hover));
+        }
+    }
+}

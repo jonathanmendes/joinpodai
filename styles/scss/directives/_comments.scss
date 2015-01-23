@@ -1,0 +1,80 @@
+// Container for storing the list of comments
+.comments-list {
+    max-height: 200px;
+}
+
+
+// Comment Styling
+.comment {
+
+    // Body of the comment
+    .comment-body {
+        padding: 0.618rem 0.5rem 0;
+
+        .comment-content {
+            min-width: 210px;
+            padding-left: 1.75rem;
+            @extend .break-word;
+        }
+        .comment-content {
+            margin: 0.25rem 0 0;
+
+            .comment-delete {
+                min-width: 20px;
+            }
+        }
+
+        // Specific to Discussions/Decisions
+        .vote-count {
+            background-color: #EFEFEF;
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-right: 1.5rem;
+            padding: 0.25rem 0.5rem;
+            @include no-text-select();
+            @include border-radius(2px);
+        }
+
+        // Last comment in the list
+        &:last-child .comment-body {
+            border-bottom: none !important;
+        }
+    }
+}
+
+
+// Comment entry
+.comment-entry-wrapper {
+    height: 35px;
+    min-height: 35px;
+    width: 100%;
+    @include border-radius(3px);
+
+    .comment-input-wrapper {
+        margin-right: 40px;
+    }
+
+    .comment-textarea {
+        border-top: 1px solid #ECECEC;
+        border-right: none;
+        border-left: 1px solid #ECECEC;
+        border-bottom: 1px solid #ECECEC;
+        margin-bottom: 0;
+        min-height: 35px;
+        padding: 0.55rem 0.5rem 0.4rem;
+        padding-right: 3px;
+        width: 100%;
+        @include border-radius(0);
+
+        &:focus {
+            background-color: #FFF;
+            border-color: #ECECEC;
+        }
+    }
+
+    .comment-button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

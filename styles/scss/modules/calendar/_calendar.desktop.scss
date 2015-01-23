@@ -1,0 +1,203 @@
+$calendar-width: 800px;
+$calendar-height: 400px;
+$calendar-border: #EEE;
+
+$task-header-bg: #ECE2FF;
+$task-content-bg: #FBF5FF;
+$event-header-bg: #DBECCA;
+$event-content-bg: #F0FFF0;
+
+.calendar-content-container {
+	width: 70%;
+	float: left;
+	@include user-select(none);
+
+	.calendar-space {
+		height: 100px;
+	}
+
+	.calendar-up,.calendar-down {
+		position: fixed;
+		width: inherit;
+		height: 50px;
+		width: 70%;
+		z-index: 98;
+		text-align: center;
+		font-size: 1.75rem;
+		cursor: pointer;
+
+		.control-block {
+			padding: 0 0.5rem;
+			background-color: #FEFEFE;
+			border: 1px solid #EBEBEB;
+			// @include single-box-shadow(rgba(0, 0, 0, 0.0375), 0px, 2px, 3px, 0px, false);
+			@include border-radius(3px);
+		}
+	}
+	.calendar-up {
+		@include background-image(linear-gradient(bottom, rgba(255, 255, 255, 0.1), $yunite-background-grey));
+	}
+
+	.calendar-down {
+		padding-top: 10px;
+		bottom: 0;
+		@include background-image(linear-gradient(top, rgba(255, 255, 255, 0.1), $yunite-background-grey));
+	}
+
+	.calendar-content {
+		margin: 150px auto;
+		height:1000px;
+		width: 90%;
+		max-width: $calendar-width;
+
+		.calendar-main {
+			border-right: 1px solid $calendar-border;
+			border-bottom: 1px solid $calendar-border;
+			.day-current{
+				.calendar-quick-create{
+					display: inline-block !important;
+				}
+			}
+
+			.day {
+				@include single-transition(300ms, background-color, ease);
+
+				.calendar-quick-create {
+					display:none;
+					top: 4px;
+					right: 4px;
+					position: absolute;
+				}
+
+				.day-num {
+					font-size: 0.9rem;
+					font-weight: 500;
+					padding: 4px;
+					color: lighten(#000, 40%);
+					z-index: 100;
+					position: absolute;
+					cursor: default;
+				}
+
+				.day-num-today {
+					position: absolute;
+					top: 6px;
+					left: 0;
+					z-index: 99;
+					width: 27px;
+					height: 23px;
+					text-align: right;
+					font-size: 0.75rem;
+
+					.fa, .today {
+						font-size: 0.80rem;
+						color: $yunite-warning;
+					}
+				}
+
+				&:hover, &:focus {
+					cursor: pointer;
+					background-color: #BDE7E5;
+
+					.calendar-quick-create{
+						display: inline-block;
+					}
+				}
+
+				.calendar-items {
+					height: 100%;
+					position: absolute;
+					font-size: 0.65rem;
+					width: 100%;
+					margin-top: 25px;
+					cursor: pointer;
+
+					.calendar-item {
+						cursor: pointer;
+						padding: 3px;
+						padding-top: 4px;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						color: #FFF;
+						margin-bottom: 2px;
+
+						.fa {
+							margin-right: 0;
+						}
+
+						.calendar-item-time{
+							margin-right: 2px;
+						}
+					}
+
+					.calendar-item-event {
+						background-color: $event-header-bg;
+						color: darken(#36883A, 5%);
+					}
+
+					.calendar-item-task {
+						background-color: $task-header-bg;
+						color: darken(#8752A5, 5%);
+					}
+				}
+				.calendar-item-overflow {
+					position: absolute;
+					height: 25px;
+					font-size: 0.7rem;
+					text-align: center;
+					padding-top: 14px;
+					color: $yunite-lightblue-hover;
+					z-index: 900;
+					bottom: 0;
+					width: 100%;
+					cursor: pointer;
+					@include background-image(linear-gradient(top, rgba(#FFF,0.5),#FFF));
+
+					&:hover, &:focus {
+						color: $yunite-warning;
+					}
+				}
+			}
+		}
+
+		.calendar-header {
+			height: 70px;
+			position: relative;
+
+			.calendar-monthyear {
+				text-align: center;
+			}
+
+			.calendar-dayheads {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background-color: $yunite-lightblue-alt;
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+				color: #FFF;
+				font-size: 0.85rem;
+				border-bottom: 3px solid darken($yunite-lightblue-alt,1%);
+
+				div.calendar-dayhead:first-of-type {
+					border-left: none;
+				}
+
+				.calendar-dayhead {
+					overflow: hidden;
+					float: left;
+					height: 27px;
+					width: 14.28%;
+					margin-bottom: 0;
+					text-align: center;
+					padding-top: 8px;
+					border-left: 1px solid lighten($yunite-lightblue-alt,2%);
+					padding-bottom: 5px;
+				}
+			}
+
+		}
+	}
+
+}

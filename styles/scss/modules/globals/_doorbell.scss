@@ -1,0 +1,38 @@
+// Doorbell styling
+#doorbell-button {
+    display: none !important;
+}
+
+#doorbell-background {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+// Form custom styling
+#doorbell form {
+    border-top: 1px solid #F0F0F0;
+    border-left: 1px solid #F0F0F0;
+
+    -moz-box-shadow: 3px 5px 5px 0 #E5E5E5;
+    -webkit-box-shadow: 3px 5px 5px 0 #E5E5E5;
+    box-shadow: 3px 5px 5px 0 #E5E5E5;
+}
+
+// Checkbox fix
+#doorbell-attach-screenshot {
+    height: auto;
+}
+
+// Hover state for close form elements
+#doorbell-container .close:hover {
+    color: $yunite-alert;
+    opacity: 1;
+}
+
+// Send button custom styles
+#doorbell-submit-button {
+    margin-bottom: 0.75rem;
+
+    &:hover {
+        background-color: $yunite-green;
+    }
+}

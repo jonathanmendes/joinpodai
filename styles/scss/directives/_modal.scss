@@ -1,0 +1,87 @@
+.modal-background {
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9992;
+    top: 0;
+    left: 0;
+}
+
+.modal-window {
+    background-color: #FFF;
+    display: block;
+    position: relative;
+    z-index: 9993;
+    height: 80%;
+    width: 80%;
+    max-width: 320px;
+
+    -webkit-box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
+
+    @include responsive-center();
+    @include border-radius(3px);
+
+
+    &.has-padding {
+        padding: 1rem;
+    }
+
+    // Close link/button
+    .close-button {
+        display: block;
+        float: right;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+
+        &.absolute-right {
+            position: absolute;
+            right: 10px;
+            z-index: 1;
+        }
+
+    }
+
+    // For absolutely positioning the close button to the top right
+    .ab-pos-wrapper {
+        height: 20px;
+        position: absolute;
+        z-index: 1000;
+        right: 10px;
+        top: 10px;
+    }
+
+
+    // Specific for profile Modals
+    &.profile-modal {
+        max-height: 530px;
+        min-height: 130px;
+        padding: 1rem;
+
+        &.profile-view {
+            max-height: 270px;
+        }
+    }
+
+
+    // Member List Modal stying
+    &.member-modal {
+        max-height: 320px;
+        min-height: 320px;
+        padding: 1rem;
+
+        .scrollable {
+            height: 170px;
+            padding-bottom: 2px;
+
+            -webkit-box-shadow: inset 0px -1px 3px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0px -1px 3px rgba(0,0,0,0.1);
+            box-shadow: inset 0px -1px 3px rgba(0,0,0,0.1);
+        }
+    }
+}

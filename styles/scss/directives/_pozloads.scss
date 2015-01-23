@@ -1,0 +1,29 @@
+.pozloads {
+    height: 10rem;
+    width: 10rem;
+    border: 2px #DCDCDC dashed;
+    @include border-radius(4px);
+}
+
+
+//  File upload area styling
+.file-upload-area {
+    border: 2px #DCDCDC dashed;
+    @include border-radius(4px);
+
+    &.expandable {
+        height: auto;
+        min-height: 5.725rem;
+        width: 100%;
+    }
+
+    &.what-a-drag {
+        border-color: $yunite-lightblue-hover;
+    }
+
+    .file-upload-buttons {
+        width: 10rem;
+        display: block;
+        margin: 0 auto;
+    }
+}

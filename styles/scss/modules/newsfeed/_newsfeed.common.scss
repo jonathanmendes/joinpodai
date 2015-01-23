@@ -1,0 +1,67 @@
+// Newsfeed list
+.newsfeed-list {
+	.news-item {
+		padding: 0.75rem 0.75rem;
+		border-bottom: 1px solid #E6E6E6;
+
+		&.unread {
+			background-color: $yunite-background-notification-blue;
+			border-bottom: 1px solid darken($yunite-background-notification-blue, 5%);
+		}
+
+		&.important {
+			background-color: $yunite-background-notification-yellow;
+			border-bottom: 1px solid darken($yunite-background-notification-yellow, 5%);
+		}
+
+		&.small {
+			padding: 0.5rem 0.75rem;
+		}
+
+		&:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		.action-icon {
+			margin-right: 0.5rem;
+
+			.fa {
+				margin-top: 0.25rem;
+			}
+		}
+		.action {
+			.action-lower {
+				margin-top: 0.125rem;
+			}
+		}
+		.news-date-time {
+			margin-top: 0.125rem;
+		}
+
+		&.not-loaded {
+			width: 100%;
+
+			.news-content {
+				height: 28px;
+			}
+
+			.action-icon, .notif-upper, .news-date-time {
+				background-color: #E6E6E6;
+
+			}
+			.action-icon {
+				width: 13px;
+				height: 14px;
+			}
+			.notif-upper {
+				width: 250px;
+				height: 15px;
+			}
+			.news-date-time {
+				width: 110px;
+				height: 11px;
+			}
+		}
+	}
+}

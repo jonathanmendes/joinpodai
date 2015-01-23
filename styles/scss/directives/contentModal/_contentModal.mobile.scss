@@ -1,0 +1,18 @@
+.content-modal {
+    height: 100%;
+    width: 100%;
+    max-height: auto;
+
+    .close-button {
+        font-size: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+
+    .abs-pos-wrapper {
+        width: 1.75rem !important;
+    }
+
+    .color-picker-wrapper {
+        margin: 0.25rem 0 0;
+    }
+}

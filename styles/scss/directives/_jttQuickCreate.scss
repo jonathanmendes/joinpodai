@@ -1,0 +1,82 @@
+.quick-create-card{
+	.quick-create-tabs{
+		.tab{
+			width:50%;
+			float:left;
+			text-align:center;
+			padding:5px;
+			cursor:pointer;
+			@include border-radius(3px);
+		}
+
+		.tab-active{
+			background-color:lighten($yunite-lightblue-hover,6%);
+			color:#FFF;
+		}
+		clear:both;
+		margin-bottom:5px;
+		margin-top:4px;
+		@include border-radius(3px);
+		border:1px solid #E3E3E3;
+	}
+
+	input{
+		margin-bottom:5px;
+	}
+
+	// Project
+	.project {
+	    display: block;
+	    margin: 0.75rem 0;
+	    vertical-align: middle;
+
+		.inline-label{
+			vertical-align: middle;
+			margin-top:0;
+		}
+
+	    .project-name {
+		    @include border-radius(2px);
+		    color:#FFF;
+		    padding:5px 7px;
+	        display: inline-block;
+	        font-size: 1rem;
+	        margin-top: 0;
+	        vertical-align: middle;
+	    }
+	}
+
+	.sticky-date{
+		background-color:#FFFBF0;
+		padding:10px;
+		@include border-radius(2px);
+		border:2px solid darken(#FFFBF0,10%);
+		cursor:default;
+		margin-bottom:10px;
+	}
+
+	.show-optional{
+		font-size:0.8rem;
+		color:lighten(#343434,35%);
+		margin: 5px 0px;
+		cursor:pointer;
+	}
+
+	.optional{
+		padding:5px;
+	}
+
+	.num-assignees{
+		float:right;
+
+		span:hover{
+
+		}
+		span{
+			background-color:#E8E8E8;
+			padding:2px 2px;
+			font-size:0.7rem;
+			border-radius: 3px;
+		}
+	}
+}

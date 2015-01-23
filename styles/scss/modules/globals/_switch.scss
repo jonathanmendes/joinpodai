@@ -1,0 +1,134 @@
+// Custom Switch Styling
+.switch-row {
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+
+    .text {
+        @extend .cursor;
+        @include no-text-select();
+    }
+
+    &.lesser-margin {
+        margin: 0.75rem 0;
+    }
+}
+.switch {
+    position: relative;
+    width: 5rem;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+
+    &.icons {
+        width:  4.25rem;
+    }
+}
+.switch-checkbox {
+    display: none;
+}
+.switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #E6E6E6;
+    @include border-radius(20px);
+}
+.switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.2s ease-in;
+    -webkit-transition: margin 0.2s ease-in;
+    -o-transition: margin 0.2s ease-in;
+    transition: margin 0.2s ease-in;
+}
+.switch-inner:before,
+.switch-inner:after {
+    display: block;
+    float: left;
+    width: 4rem;
+    height: 25px;
+    padding: 0;
+    line-height: 26px;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    @include border-radius(20px);
+}
+.switch-inner.small:before,
+.switch-inner.small:after {
+    width: 3.75rem;
+    height: 19px;
+    line-height: 19px;
+}
+.switch-inner.icons:before,
+.switch-inner.icons:after {
+    width: 3.25rem;
+}
+.switch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: $yunite-green;
+    color: #FFFFFF;
+}
+.switch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+    float: right;
+}
+.switch-inner.yes-no:before {
+    content: "YES";
+}
+.switch-inner.yes-no:after {
+    content: "NO";
+}
+.switch-inner.icons:before {
+    content: '\f00c';
+    font-family: FontAwesome;
+}
+.switch-inner.icons:after {
+    content: "\f00d";
+    font-family: FontAwesome;
+}
+.switch-switch {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0.5rem;
+    background: #FFFFFF;
+    border: 2px solid #E6E6E6;
+    border-radius: 1.5rem;
+    position: absolute;
+    bottom: 2px;
+    right: 2.25rem;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+
+    &.small {
+        margin: 0.4rem;
+        right: 2.5rem;
+    }
+
+    &.icons {
+        margin: 0.35rem;
+        right: 1.75rem;
+    }
+}
+.switch-checkbox:checked + .switch-label .switch-inner {
+    margin-left: 0;
+}
+.switch-checkbox:checked + .switch-label .switch-switch {
+    right: 0.4rem;
+    border-color: darken($yunite-green, 2.5%);
+}
+.switch-checkbox:checked + .switch-label .switch-switch.icons {
+    right: 0.25rem;
+}

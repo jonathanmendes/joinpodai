@@ -1,0 +1,76 @@
+.notifications-container {
+	max-height: 500px;
+	cursor: default;
+	position: relative;
+	min-height: 45px;
+
+	.section-header {
+		padding-bottom: 5px;
+		margin-top: 1rem;
+		border-bottom: 1px solid #ECECEC;
+		color: #a9a9a9;
+	}
+
+	.mark-all {
+		padding: 0 0.3rem;
+	}
+
+	.notifications-invites {
+		width: 100%;
+
+		.notification-invite {
+			position: relative;
+
+			.inv-hover {
+				padding: 0 0.25rem;
+				width: auto;
+				@include border-radius(3px);
+
+				&:first-child {
+					margin-right: 0.75rem;
+				}
+
+				&:last-child {
+					padding-right: 0.35rem;
+				}
+
+				&:hover, &:focus {
+					background-color: #FFF;
+				}
+			}
+
+			.inv-body {
+				padding: 0.25rem 0 0.25rem 0.25rem;
+				margin: 0.5rem 0 0.5rem 0rem;
+				border: 1px solid darken(#e5f0f4, 5%);
+				border-bottom-width: 3px;
+				@include border-radius(3px);
+
+				&:active {
+					background-color:darken(#e5f0f4, 5%);
+				}
+			}
+
+			.inv-unaccepted {
+				background-color: #e5f0f4;
+			}
+
+			.inv-accepted {
+				background-color: #ececec;
+			}
+		}
+	}
+
+	.notifications-generic {
+		.news-item {
+			padding: 0.5rem;
+			background-color: darken(#FFF,5%);
+			border-top: 1px solid darken(#e5f0f4,5%);
+			line-height: 120%;
+			@include border-radius(2px);
+		}
+		.read {
+			background-color: #FFF;
+		}
+	}
+}

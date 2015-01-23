@@ -1,0 +1,311 @@
+.view-container {
+    &.project-view {
+        padding: 0;
+    }
+}
+
+.pod-header {
+    min-height: 33px;
+}
+
+
+.project-view {
+    .task-header {
+        color: #8752A5;
+    }
+    .event-header {
+        color: #36883A;
+    }
+
+    .project-child {
+        border-bottom: 1px solid #E9E9E9;
+
+        &:last-child {
+            border-bottom: none !important;
+        }
+    }
+}
+
+
+.creation-form {
+    &.task-creation-form {
+        .jtt-date-time {
+            margin: 1rem 0 1rem;
+        }
+    }
+}
+
+
+// Color classes for pods
+.pod-standard {
+    background-color: rgba(255, 255, 255, 0.125);
+
+    &:hover {
+        color: black;
+    }
+}
+.pod-red {
+    background-color: #C7605B;
+
+    &.active { background-color: #C7605B; }
+    &.faded {
+        background-color: rgba(199, 96, 91, 0.45);
+
+        &:hover { background-color: #C7605B; transition: background-color 0.125s linear; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#C7605B, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #C7605B;
+    }
+}
+.pod-teal {
+    background-color: #31B8BC;
+
+    &.active { background-color: #31B8BC; }
+    &.faded {
+        background-color: rgba(49, 184, 188, 0.45);
+
+        &:hover { background-color: #31B8BC; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#31B8BC, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #31B8BC;
+    }
+}
+.pod-blue {
+    background-color: #5C9CC4;
+
+    &.active { background-color: #5C9CC4; }
+    &.faded {
+        background-color: rgba(92, 156, 196, 0.45);
+
+        &:hover { background-color: #5C9CC4; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#5C9CC4, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #5C9CC4;
+    }
+}
+.pod-green {
+    background-color: #5DC279;
+
+    &.active { background-color: #5DC279; }
+    &.faded {
+        background-color: rgba(93, 194, 121, 0.45);
+
+        &:hover { background-color: #5DC279; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#5DC279, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #5DC279;
+    }
+}
+.pod-orange {
+    background-color: #E29E66;
+
+    &.active { background-color: #E29E66; }
+    &.faded {
+        background-color: rgba(226, 158, 102, 0.45);
+
+        &:hover { background-color: #E29E66; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#E29E66, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #E29E66;
+    }
+}
+.pod-purple {
+    background-color: #966ECC;
+
+    &.active { background-color: #966ECC; }
+    &.faded {
+        background-color: rgba(150, 110, 204, 0.4);
+
+        &:hover { background-color: #966ECC; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#966ECC, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #966ECC;
+    }
+}
+.pod-magenta {
+    background-color: #BA72BF;
+
+    &.active { background-color: #BA72BF; }
+    &.faded {
+        background-color: rgba(186, 114, 191, 0.45);
+
+        &:hover { background-color: #BA72BF; transition: background-color 0.125s linear; }
+    }
+    &.lighten { background-color: lighten(#BA72BF, 7.5%); }
+    &.notif  {
+        background-color: transparent;
+        color: #BA72BF;
+    }
+}
+
+
+// Pod Chat
+#chat-content {
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+
+// Wrapper for content items that arent chat messages
+.chat-wrapper {
+    margin-top: 0.75rem;
+    padding-left: 3.75rem;
+    padding-right: 1rem;
+}
+
+
+// Chat messages
+.chat-message {
+    margin-top: 0.75rem;
+
+    .inline-time {
+        .time {
+            display: none;
+
+            -webkit-animation: 0.3s fadeIn;
+            animation: 0.3s fadeIn;
+        }
+    }
+
+    .user-image {
+        width: 45px;
+    }
+
+    .chat-profile-img {
+        width: 30px;
+    }
+
+    .time {
+        height: 19px;
+        line-height: 20px;
+    }
+
+    .message-body {
+        .message-content {
+            padding: 0.25rem 0;
+            color: #666;
+        }
+
+        .message-options {
+            -webkit-animation: 0.3s fadeIn;
+            animation: 0.3s fadeIn;
+        }
+    }
+
+    // Sibling message spacing
+    &.sibling-message {
+        margin-top: 0.25rem;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .message-content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    // Hover based styling
+    &:hover {
+        .inline-time {
+            .time { display: block; }
+        }
+    }
+}
+
+#chat-entry-box {
+    background-color: #008cba;
+    background-color: #E2E2E2;
+    background-color: #FFF;
+    border-top: 1px solid #DFDFDF;
+    width: 100%;
+    min-height: 80px;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -1px 5px 0px #EAEAEA;
+    z-index: 100;
+
+    // -webkit-transition: all 0.3s cubic-bezier(0, .5, .5, 1);
+    //         transition: all 0.3s cubic-bezier(0, .5, .5, 1);
+
+    .added-padding {
+        padding: 0.75rem;
+    }
+
+    &.ng-hide-remove {
+        -webkit-animation: slideUp 0.3s;
+                animation: slideUp 0.3s;
+    }
+    &.ng-hide-add {
+        -webkit-animation: slideUp 0.3s;
+                animation: slideUp 0.3s;
+        display: block !important;
+    }
+    &.ng-hide {
+        display: none !important;
+    }
+
+    &.no-inputs {
+        height: 33px;
+        min-height: 33px;
+    }
+}
+
+.chat-form {
+    min-height: 47px;
+    max-height: 47px;
+    padding: 5px 5px 7px;
+}
+
+.chat-entry-type {
+    min-height: 33px;
+    background-color: darken(#BBBBBB, 10%);
+    background-color: #007298;
+
+    .chat-type-button {
+        float: left;
+        height: 33px;
+        padding: 0.55rem 1.25rem;
+
+        &.active {
+            background-color: #008cba;
+            background-color: #E2E2E2;
+            background-color: #FFF;
+            padding: 0.5rem 1rem;
+
+            -webkit-animation: zoomIn 0.3s;
+                    animation: zoomIn 0.3s;
+
+            .fa {
+                font-size: 1.25rem;
+                color: $yunite-lightblue-hover;
+                color: $yunite-green;
+            }
+        }
+    }
+}
+
+
+.bottomUp {
+    bottom: 82px;
+    position: absolute;
+}
+
+.topDown {
+    bottom: 0;
+    position: relative;
+}

@@ -1,0 +1,41 @@
+.filterContainer{
+	&:first-child{
+		margin-bottom:5px;
+	}
+	.filter{
+
+		padding:5px 5px;
+		padding-bottom:2px;
+		@include border-radius(4px);
+
+		input{
+			margin-bottom : 0px !important;
+			margin-top:1px;
+			margin-right: 10px;
+		}
+
+		vertical-align:top;
+		margin-bottom:2px;
+		
+		&:hover{
+			background-color:lighten($yunite-lightblue,30%);
+		}
+
+		&:active{
+			background-color:lighten($yunite-lightblue,25%);
+		}
+	}
+	.filterEnabled{
+		background-color:lighten($yunite-lightblue,25%);
+	}
+}
+.scroll-to-top{
+	opacity: 1.0;
+	transition:200ms linear all !important;
+
+}
+
+.scroll-to-top.ng-hide{
+	  display:block!important;
+	  opacity:0.0;
+}

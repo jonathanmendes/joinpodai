@@ -1,0 +1,66 @@
+/* Logo Colors */
+$yunite-logo-lightblue: #6DCDE9;
+$yunite-logo-darkblue: #016C77;
+
+
+/* General Colors */
+$yunite-lightblue: $yunite-logo-lightblue;
+$yunite-lightblue-alt: #008cba;
+$yunite-lightblue-hover: #0078a0;
+$yunite-lightgreen: #9BD367;
+$yunite-green: #88C84B;
+$yunite-green-hover: #7BB446;
+$yunite-warning: #F39C12;
+$yunite-warning-hover: darken($yunite-warning, 15%);
+$yunite-alert: #C22625;
+$yunite-alert-hover: darken($yunite-alert, 10%);
+$yunite-pink: #d57fc0;
+$yunite-gold: #e4b727;
+$yunite-purple: #6E53A7;
+$yunite-note-yellow: #DFC45A;
+
+// Border Colors
+$yunite-border-lightgrey: #E5E5E5;
+
+/* Background Colors */
+$yunite-background-grey: #F1F1F1;
+$yunite-background-sidebar: #053040;
+$yunite-background-topbar: $yunite-lightblue-alt;
+$yunite-background-notification-blue: #E5F0F4;
+$yunite-background-notification-yellow: #FFFFF2;
+$yunite-background-notification-red: #FFF3F2;
+
+
+/* Call-to-Action Gradient Colors */
+// Orange
+$cta-orange-start: #DFAB50;
+$cta-orange-end: #DAA13B;
+$cta-orange-border-bottom: #C69939;
+$cta-orange-hover: #CE862C;
+
+// Blue
+$cta-blue-start: #6BB8EB;
+$cta-blue-end: #78ADE7;
+$cta-blue-border-bottom: #6293DC;
+$cta-blue-hover: #5382C9;
+
+// Light Blue
+$cta-lightblue-start: #6DCDE9;
+$cta-lightblue-end: #5AC0DD;
+$cta-lightblue-border-bottom: #52B6D3;
+$cta-lightblue-hover: #5382C9;
+
+// Green
+$cta-green-start: #9BD367;
+$cta-green-end: #88C84B;
+$cta-green-border-bottom: #7FB136;
+$cta-green-hover: #7BB446;
+
+// Red
+$cta-red-start: $yunite-alert;
+$cta-red-end: #A61B1A;
+$cta-red-border-bottom: #971B1B;
+$cta-red-hover: #841414;
+
+// Font
+$sans-serif: "rooney-sans", sans-serif !important;

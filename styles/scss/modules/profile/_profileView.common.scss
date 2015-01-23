@@ -1,0 +1,72 @@
+.profile-view {
+
+    .person-row {
+        margin: 0 0 0.75rem 0;
+        text-align: center;
+
+        .row {
+            margin-top: 1rem;
+        }
+    }
+
+    // Contact Row
+    .contact-row {
+        margin-top: 0;
+        text-align: center;
+
+        .detail {
+            margin: 0.5rem 0;
+        }
+    }
+
+    // Groups List
+    .group-list {
+        list-style-type: none;
+        margin: 0;
+
+        .group {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.125rem 0.25rem;
+
+            @include border-radius(2px);
+
+            &:hover, &:focus {
+                background-color: $yunite-background-notification-blue;
+                cursor: pointer;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            img {
+                margin-right: 0.25rem;
+            }
+        }
+    }
+
+    // Permissions
+    .permissions {
+        list-style-type: none;
+        margin: 0;
+
+        .permission {
+            display: block;
+            margin: 0.25rem 0;
+
+            input, label {
+                display: inline-block;
+                margin: 0;
+                vertical-align: middle;
+            }
+            input {
+                margin-right: 0.25rem;
+            }
+            label {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}

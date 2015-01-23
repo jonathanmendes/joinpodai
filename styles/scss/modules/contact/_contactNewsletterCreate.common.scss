@@ -1,0 +1,58 @@
+.newsletter-create {
+
+    .border {
+        border-bottom: 1px solid $yunite-border-lightgrey;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .step-description,
+    .next-step-notification {
+        @extend .text.darkgrey;
+        @extend .text.small;
+    }
+
+    .next-step-notification {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1rem;
+    }
+
+    .email-preview-area {
+
+        .email-preview {
+            background-color: #EFEFEF;
+            display: block;
+            margin: 1rem auto;
+            width: 100%;
+
+            .email {
+                margin: 0 auto;
+                max-width: 560px;
+                padding: 2rem 1rem;
+                width: 100%;
+                text-align: center;
+
+                .header {
+                    height: 90px;
+                    padding: 2rem 1rem;
+                    background-color: #008cba;
+                    h4 { color: #FFF; }
+                }
+                .content {
+                    background-color: #fff;
+                    height: auto;
+                    min-height: 150px;
+                    color: #555;
+                    padding: 4rem 2rem;
+                    line-height: 1.4;
+                }
+                .footer {
+                    background-color: #008cba;
+                    height: 80px;
+                    p { font-size: 0.9rem; color: #FFF; margin-bottom: 0.25rem;}
+                }
+            }
+        }
+    }
+}

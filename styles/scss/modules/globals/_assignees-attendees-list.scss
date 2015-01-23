@@ -1,0 +1,54 @@
+// Assigned-to and Attendees list list
+.assignees-list, .attendees-list {
+    line-height: 2rem;
+    margin-bottom: 0;
+
+    .assignee, .attendee {
+        @extend .cursor;
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+        @include no-text-select();
+
+        .profile-img, .profile-img-size-thumb {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        .name {
+            @extend .text.small;
+            @extend .text.blue;
+            margin-left: 0.125rem;
+        }
+
+        &:after {
+            @extend .text.grey;
+            content: ',';
+            margin-right: 0.5rem;
+        }
+        &:last-child {
+            &:after {
+                content: '';
+                margin: 0;
+            }
+        }
+
+        &:hover, &:focus {
+            .name {
+                @extend .text.green;
+            }
+        }
+
+        &.blank {
+            @extend .text.small;
+            @extend .text.grey;
+            vertical-align: middle;
+            padding-bottom: 0;
+            margin-right: 0;
+
+            &:after {
+                content: '';
+            }
+        }
+    }
+}

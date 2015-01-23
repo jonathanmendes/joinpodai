@@ -1,0 +1,185 @@
+// Input field for Assignees
+.assignees {
+    border: 2px solid #E6E6E6;
+    display: block;
+    margin-bottom: 1.25rem;
+    min-width: 250px;
+    width: 100%;
+
+    &.member-list {
+        margin-bottom: 0;
+
+        .the-a-team {
+            min-height: 53px;
+        }
+    }
+
+    // Search field for Assignees
+    .a-team-search {
+        display: block;
+        border-bottom: 2px solid #EFEFEF;
+        height: 3rem;
+        padding: 0.5rem;
+        position: relative;
+
+        input, input[type="text"], .search {
+            border: none;
+            border-bottom: 1px solid #E6E6E6;
+            height: 2rem;
+            padding: 0 2rem 0 0.5rem;
+        }
+
+        .fa {
+            @extend .text.lightgrey;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+
+            @include no-text-select();
+        }
+    }
+
+    // List of Members/Assignees
+    .the-a-team {
+        background-color: #EFEFEF;
+        max-height: 10.5rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        @include border-radius(2px);
+
+        .assignee {
+            @extend .panel.card;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            margin-right: 0.75rem;
+            padding: 0.25rem;
+            padding-right: 0.75rem;
+            vertical-align: middle;
+            @include border-radius(2px);
+            @include no-text-select();
+
+            .image {
+                position: relative;
+                width: 20px;
+                height: 20px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid transparent;
+                }
+
+                .fa {
+                    background-color: rgba(0, 0, 0, 0.25);
+                    border: 2px solid transparent;
+                    color: #FFF;
+                    display: none;
+                    font-size: 0.8rem;
+                    width: 20px;
+                    height: 20px;
+                    padding-top: 0.2rem;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    left: 0;
+                    @include border-radius(50%);
+                }
+            }
+
+            .name {
+                margin-left: 0.5rem;
+            }
+
+            &:hover, &:focus {
+                cursor: pointer;
+                background-color: $yunite-background-notification-blue;
+
+                .image {
+                    .fa {
+                        display: inline-block;
+                        border: 2px solid #333;
+                    }
+                }
+
+                .name {
+                    color: #333;
+                }
+            }
+
+            // Selected Assignee styling
+            &.selected {
+                background-color: $yunite-background-notification-yellow;
+
+                .image {
+                    .fa {
+                        background-color: rgba(255, 255, 255, 0.85);
+                        border: 2px solid $yunite-warning;
+                        color: $yunite-warning;
+                        display: inline-block;
+                        z-index: 200;
+                    }
+                }
+
+                .name {
+                    color: $yunite-warning;
+                }
+            }
+
+            &.promoteable {
+                border: none;
+                cursor: pointer;
+                max-height: 28px;
+                min-height: 28px;
+                padding: 0 0 0 0.5rem;
+
+                .name {
+                    margin-left: 0.25rem;
+                }
+
+                .promote-button {
+                    background-color: $yunite-lightblue;
+                    color: #FFF;
+                    max-height: 28px;
+                    padding: 0.5rem 0.625rem;
+                    position: relative;
+
+                    &:hover {
+                        background-color: $yunite-green;
+                    }
+
+                    &.demote {
+                        background-color: $yunite-warning;
+
+                        &:hover {
+                            background-color: $yunite-warning-hover;
+                        }
+                    }
+
+                    &.remove {
+                        background-color: $yunite-alert;
+
+                        &:hover {
+                            background-color: $yunite-alert-hover;
+                        }
+                    }
+                }
+
+                &:hover, &:focus {
+                    cursor: pointer;
+                    background-color: #FFF;
+
+                    .image .fa {
+                        background-color: #fff;
+                        border: none;
+                    }
+
+                    .name {
+                        color: #333;
+                    }
+                }
+            }
+
+        }
+    }
+}

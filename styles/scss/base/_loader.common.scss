@@ -1,0 +1,14 @@
+#loader-view {
+  z-index: 9000;
+  text-align: center;
+  background-color: $yunite-background-grey;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+}
+
+.loader-hidden {
+  opacity: 0 !important;
+}

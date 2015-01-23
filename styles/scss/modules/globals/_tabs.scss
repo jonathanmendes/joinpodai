@@ -1,0 +1,86 @@
+.tabset {
+    margin: 0;
+
+    &.full-width {
+        width: 100%;
+    }
+
+    .tabs-nav {
+        height: 32px;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: auto;
+        box-shadow: 0 3px 2px 0px #CDCDCD;
+
+        .tab {
+            float: left;
+            height: 32px;
+
+            .tab-title {
+                height: 32px;
+                padding: 0.5rem 1rem;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .tab-title {
+                    background-color: #FFF;
+                }
+            }
+
+            &.active {
+                .tab-title {
+                    background-color: #FFF;
+                    border-bottom: 2px solid $yunite-lightblue-hover;
+
+                    -webkit-animation: zoomIn 0.3s;
+                       -moz-animation: zoomIn 0.3s;
+                         -o-animation: zoomIn 0.3s;
+                            animation: zoomIn 0.3s;
+
+                    &.purple    { border-bottom-color: $yunite-purple;    }
+                    &.green     { border-bottom-color: $yunite-green;     }
+                    &.lightblue { border-bottom-color: $yunite-lightblue; }
+
+                    .fa-caret-down {
+                        font-size: 0.85rem;
+                        line-height: 0.4;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs-content {
+        .tab-pane {
+            display: none;
+            padding-bottom: 1rem;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.sidescroll-outer-container {
+    height: 32px;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+
+    .sidescroll-inner-container {
+        position: relative;
+        height: 32px;
+        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        min-width: 380px;
+        -webkit-overflow-scrolling: touch;
+    }
+}

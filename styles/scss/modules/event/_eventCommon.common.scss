@@ -1,0 +1,51 @@
+// Event card styling
+.event-card {
+	margin-bottom: 0.75rem;
+	padding: 0.5rem 0;
+
+	&.minimal {
+		padding: 0.5rem 0;
+	}
+
+	.show-more-link {
+		display: block;
+		margin-top: 0.5rem;
+	}
+
+	.row {
+		max-width: 100%;
+	}
+}
+
+// Target event cards in the chat view
+#chat-content {
+	.event-card {
+		padding: 0.5rem 0;
+	}
+}
+
+.event {
+
+	.location-map {
+		background-color: #EFEFEF;
+
+		.empty-location {
+			color: #CCC;
+			text-align: center;
+			@include responsive-center();
+			-webkit-transform: translate(-50%, -50%);
+		}
+
+		&, & iframe {
+			width: 100% !important;
+			min-height: 200px;
+			height: auto;
+		}
+	}
+}
+
+
+.event-home-map {
+	float: right;
+	@include border-radius(2px);
+}

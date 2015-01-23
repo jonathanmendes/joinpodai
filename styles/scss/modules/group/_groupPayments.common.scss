@@ -1,0 +1,95 @@
+// Wrapper for the cost information
+.cost-wrapper {
+    background-color: $yunite-green;
+    max-width: 100px;
+    margin: 0 auto;
+    @include border-radius(3px);
+}
+
+.cost-wrapper-alt {
+    background-color: #EAF5E9;
+    max-width: 100px;
+    margin: 0 auto;
+    @include border-radius(5px);
+    border: 2px solid #9BDF5C;
+}
+
+
+
+// Plan wrapper
+.plan-wrapper {
+
+    // Additional spacing between the plan-list-items
+    .feature-list {
+        min-height: 195px;
+        background-color: #FAFAFA;
+
+        &.active-feature-list {
+            background-color: #EAF5E9;
+        }
+
+        ul { margin-bottom: 0.5rem; }
+
+        li { margin-bottom: 0.125rem; }
+    }
+
+    .inactive-option {
+        background-color: #BBBBBB;
+        border-bottom: 2px solid #BEBEBE;
+    }
+
+    .active-option {
+        background-color: $yunite-green;
+        border-bottom: 2px solid $yunite-green-hover;
+    }
+
+}
+
+// Plan wrapper-hover effects
+.plan-wrapper-hover:hover {
+    .feature-list {
+        background-color: #ECF1F9;
+
+        &.active-feature-list {
+            background-color: #EAF5E9;
+        }
+    }
+
+    .inactive-option {
+        background-color: $yunite-lightblue-hover;
+        border-bottom: 2px solid $yunite-lightblue-hover;
+    }
+
+    .active-option {
+        background-color: $yunite-green-hover;
+        border-bottom: 2px solid $yunite-green-hover;
+    }
+}
+
+
+// Temp location for new toggle switch
+.toggle-switch {
+    .option {
+        color: #FFF;
+
+        &.first {
+            border-right: 1px solid #C0C0C0;
+            -webkit-border-top-left-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-topleft: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        &.last {
+            border-left: 1px solid #C0C0C0;
+            -webkit-border-top-right-radius: 3px;
+            -webkit-border-bottom-right-radius: 3px;
+            -moz-border-radius-topright: 3px;
+            -moz-border-radius-bottomright: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+}

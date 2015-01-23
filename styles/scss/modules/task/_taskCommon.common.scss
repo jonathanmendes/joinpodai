@@ -1,0 +1,175 @@
+// Task card styling
+.task-card {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1rem 0.25rem;
+
+    &.minimal {
+        padding: 0.5rem 0.75rem 0.375rem;
+    }
+
+    .actions {
+        &.home-actions {
+            .left {
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    &.full-view {
+        margin-bottom: 1.5rem;
+        padding: 1.41rem;
+
+        .title {
+            display: block;
+            width: 100%;
+
+            .checkbox {
+                float: left;
+            }
+        }
+
+        .note {
+            margin-top: 0.75rem;
+        }
+
+        .assignees-list, .all-tags {
+            margin-top: 0;
+
+            &.empty {
+                margin-top: 0.75rem;
+            }
+        }
+        .project {
+            margin-top: 0;
+
+            &.empty {
+                margin-top: 1rem;
+            }
+        }
+
+        .actions {
+            margin-top: 1rem;
+        }
+    }
+
+    // Checkbox
+    .title {
+        @extend .break-word;
+        border: none !important;
+        display: inline-block;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        line-height: 1 !important;
+        min-height: 1.5rem !important;
+        float: left;
+
+        .checkbox {
+            // display: inline-block;
+            vertical-align: top;
+            float: left;
+            width: 2rem;
+            max-width: 1.75rem;
+            min-width: 1.75rem;
+            @include no-text-select();
+
+            .empty-check {
+                color: #E6E6E6;
+            }
+
+            .check-hover {
+                display: none;
+            }
+
+            &:hover, &:focus {
+                .empty-check {
+                    display: none;
+                }
+                .check-hover {
+                    display: inline-block;
+                    color: #999;
+                }
+            }
+        }
+
+        .time, .name {
+            font-size: 1.125rem;
+            line-height: 1.2;
+            vertical-align: top;
+        }
+
+        .time {
+            color: #555;
+            font-size: 0.9rem;
+            cursor: auto;
+            margin-top: 0.25rem;
+        }
+    }
+
+    .note {
+        @extend .break-word;
+
+        p {
+            @extend .break-word;
+            // margin-bottom: 0.5rem;
+        }
+    }
+
+    &:hover, &:focus {
+        .task-actions {
+            .action {
+                &:hover, &:focus {
+                    display: inline-block;
+                    @extend .text.blue;
+                }
+            }
+        }
+    }
+
+    // Completed task styling
+    &.completed {
+
+        .title {
+            .name {
+                @extend .text.grey;
+                text-decoration: line-through;
+            }
+
+            .checkbox {
+                .empty-check {
+                    display: none;
+                }
+
+                .check-hover {
+                    @extend .text.green;
+                    display: inline-block;
+                }
+
+                &:hover, &:focus {
+                    .empty-check {
+                        display: inline-block;
+                        color: #999;
+                    }
+                    .check-hover {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    // Project
+    .project {
+        display: block;
+        margin: 0.75rem 0 0;
+
+        .project-name {
+            display: inline-block;
+            font-size: 1rem;
+            margin-top: 0;
+            vertical-align: middle;
+        }
+    }
+}

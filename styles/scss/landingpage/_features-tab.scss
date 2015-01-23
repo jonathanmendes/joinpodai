@@ -1,0 +1,89 @@
+// Overwriting stock styling
+.tabs dd>a, .tabs .tab-title>a {
+    // background-color: #F5F5F5;
+    background-color: #FFFEF7;
+
+    &:hover, &:focus {
+        background-color: #BAEBE5; // We're such BAEBES!
+        border: 1px solid #BAEBE5;
+    }
+}
+
+
+// Features Tab
+.tab-block {
+    width: 33%;
+
+    &.first {
+        .inner-tab-block {
+            border-right: 1px solid transparent;
+            -webkit-border-top-left-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-topleft: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+    }
+
+    &.last {
+        .inner-tab-block {
+            border-left: 1px solid transparent;
+            -webkit-border-top-right-radius: 3px;
+            -webkit-border-bottom-right-radius: 3px;
+            -moz-border-radius-topright: 3px;
+            -moz-border-radius-bottomright: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+
+    .arrow-down {
+        display: none;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 10px solid #C4E3F0;
+        text-align: center;
+        margin: 0 auto;
+
+        -webkit-animation: fadeIn 0.6s 0.6s;
+                animation: fadeIn 0.6s 0.6s;
+    }
+
+    a {
+        outline: none !important;
+    }
+
+    &.active {
+        .inner-tab-block {
+            border: none;
+            background-color: #C4E3F0;
+            border: 1px solid #C4E3F0;
+
+            -webkit-animation: bounceIn 0.6s;
+                    animation: bounceIn 0.6s;
+
+            .fa {
+                color: $yunite-lightblue-hover;
+            }
+        }
+
+        .arrow-down {
+            display: block;
+        }
+    }
+
+    .inner-tab-block {
+        border: 1px solid #E9E9E9;
+        padding: 1rem 0.125rem 0;
+        min-height: 80px;
+
+        .fa {
+            padding: 0;
+            font-size: 1.5rem;
+        }
+    }
+
+}

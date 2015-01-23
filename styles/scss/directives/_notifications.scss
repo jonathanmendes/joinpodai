@@ -1,0 +1,174 @@
+#notifications-block {
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 2px solid #EBEBEB;
+    border-bottom: 2px solid #EBEBEB;
+    display: block;
+    float: right;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 42px;
+    z-index: 4000;
+
+    -webkit-border-bottom-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+
+    // Expanded notification area styling
+    &.expanded {
+        height: 440px;
+        max-height: 460px;
+        width: 300px;
+        max-width: 300px;
+    }
+
+    // Notifications topbar - # of, Icon & Title
+    .notifications-header {
+        height: 36px;
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+
+        &.show-border {
+            border-bottom: 1px solid #EBEBEB;
+        }
+
+        .fa {
+            padding: 0.9rem 0.5rem;
+            left: 10px;
+            position: absolute;
+            top: 1px;
+
+            &.no-notifications {
+                padding: 0.8rem 0.5rem;
+                top: 0;
+            }
+        }
+
+        .note {
+            margin-left: 2.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .notifications-circle {
+            background-color: $yunite-warning;
+            border: 2px solid #FFF;
+            display: block;
+            left: 8px;
+            padding: 1px 6px;
+            position: absolute;
+            top: 1px;
+            z-index: 3900;
+            @include border-radius(50%);
+        }
+
+    }
+
+    // Notifications Content
+    .notifications-content {
+        cursor: default;
+        max-height: 380px;
+        padding: 0 0.5rem;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-transition: height 0.3s;
+                transition: height 0.3s;
+
+        .notifications-loader {
+            position: absolute;
+            height: 100%;
+            width: 275px;
+            vertical-align: middle;
+            background-color: #FFF;
+            text-align: center;
+            padding-top: 0px;
+            color: #d8d8d8;
+            display: block;
+            opacity: 1;
+            @include single-transition(opacity, 300ms);
+
+            .fa { margin-top: 3%; }
+        }
+
+        .section-header {
+            border-bottom: 1px solid #ECECEC;
+            padding-bottom: 4px;
+        }
+
+        .notifications-invites {
+            width: 100%;
+
+            .notification-invite {
+                position: relative;
+                margin: 7px 0 7px 0;
+
+                .inv-hover {
+                    padding: 2px;
+                    margin-right: 7px;
+                    @include border-radius(3px);
+
+                    &:hover { background-color: #FFF; }
+                }
+
+                .inv-body {
+                    padding: 6px 0 6px 4px;
+                    border: 1px solid darken(#e5f0f4, 5%);
+                    border-bottom-width: 3px;
+                    @include border-radius(3px);
+
+                    &:active { background-color:darken(#e5f0f4, 5%); }
+
+                    .inv-title {
+                        width: 150px;
+                        max-width: 150px;
+                    }
+                }
+
+                .req-body {
+                    padding: 6px 0 6px 4px;
+                    border: 1px solid darken(#fffaef, 5%);
+                    border-bottom-width: 3px;
+                    @include border-radius(3px);
+
+                    // &:active { background-color:darken(#fffaef, 5%); }
+
+                    .inv-title {
+                        width: 150px;
+                        max-width: 150px;
+                    }
+                }
+
+                .inv-unaccepted { background-color: #e5f0f4; }
+                .inv-accepted { background-color: #ececec; }
+
+                .req-unaccepted { background-color: #fffaef; }
+                .req-accepted { background-color: #fffaef; }
+            }
+        }
+
+        .notifications-generic {
+            height: 47px;
+            max-height: 47px;
+            margin: 4px 0;
+
+            .news-item {
+                padding: 0.375rem 0.25rem;
+                background-color: #ECECEC;
+                @include border-radius(2px);
+            }
+            .read { background-color: #FFF; }
+        }
+    }
+
+    // Close notifications
+    .close-notifications {
+        border-top: 1px solid #EBEBEB;
+    }
+
+}

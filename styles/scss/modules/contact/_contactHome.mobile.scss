@@ -1,0 +1,99 @@
+.contacts-home {
+
+    .header {
+        padding: 1rem 1rem 0;
+
+        .page-title {
+            margin-bottom: 1rem !important;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+
+            &.search {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .general-contact-actions {
+
+        .g-c-a-header {
+            display: block;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            padding: 0;
+            text-align: center;
+        }
+
+        .g-c-actions-container {
+            border-top: 1px solid #E5E5E5;
+
+            &.first {
+                border-left: none;
+            }
+        }
+    }
+
+    .contact-card {
+
+        .contact-profile {
+            border-right: none;
+        }
+
+        .contact-actions {
+            border-top: 1px solid #E5E5E5;
+            margin-top: 0;
+            padding-bottom: 0;
+            padding-top: 0;
+
+            .contact-action {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+        }
+
+        .mobile-contact-actions {
+            border-top: 1px solid #E5E5E5;
+
+            .mobile-contact-action {
+                border-right: 1px solid #E5E5E5;
+                color: #A4A4A4;
+                cursor: pointer;
+                display: block;
+                font-size: 0.8rem;
+                font-weight: 700;
+                padding-bottom: 0.75rem;
+                padding-top: 0.75rem;
+                text-align: center;
+                text-transform: uppercase;
+                @include no-text-select();
+
+                &.note {
+                    &:hover, &:focus {
+                        color: #FFFFFF;
+                        background-color: $yunite-note-yellow;
+                    }
+                }
+                &.task {
+                    &:hover, &:focus {
+                        color: #FFFFFF;
+                        background-color: $yunite-alert;
+                    }
+                }
+                &.event {
+                    &:hover, &:focus {
+                        color: #FFFFFF;
+                        background-color: $yunite-lightblue-hover;
+                    }
+                }
+
+                &.last {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}

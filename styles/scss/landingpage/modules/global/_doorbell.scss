@@ -1,0 +1,19 @@
+// Doorbell styling
+#doorbell-button {
+    background-color: #1FA4BD;
+    background: rgba(31, 164, 189, 0.8);
+    font-size: 12px;
+    padding: 7px 15px;
+    z-index: 9999;
+
+    &:before {
+        content: "\f075";
+        font-family: FontAwesome;
+        padding-right: 0.5rem;
+    }
+
+    &:hover {
+        background-color: #137081;
+        background: #137081;
+    }
+}

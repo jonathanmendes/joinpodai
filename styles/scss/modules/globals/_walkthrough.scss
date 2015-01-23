@@ -1,0 +1,145 @@
+// Walkthrough POI styling
+
+.cd-single-point {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-animation: rubberBand 2s infinite;
+  -moz-animation: rubberBand 2s infinite;
+  animation: rubberBand 2s infinite;
+
+  &.ng-enter {
+      -webkit-animation: bounceIn 2.5s;
+      animation: bounceIn 2.5s;
+  }
+}
+.cd-single-point > .inner {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: inherit;
+  background: rgba(226, 148, 44, 0.68);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.125);
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.cd-single-point .fa {
+  padding-top: 7px;
+  padding-left: 1px;
+}
+.cd-single-point::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: transparent;
+  -webkit-animation: cd-pulse 2s infinite;
+  -moz-animation: cd-pulse 2s infinite;
+  animation: cd-pulse 2s infinite;
+}
+.cd-single-point.is-open > a {
+  background-color: #475f74;
+}
+.cd-single-point.is-open > a::after, .cd-single-point.is-open > a::before {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  transform: translateX(-50%) translateY(-50%) rotate(135deg);
+}
+.cd-single-point.is-open::after {
+  display: none;
+}
+.cd-single-point.is-open .cd-more-info {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+}
+.cd-single-point.visited > a {
+  background-color: #475f74;
+}
+.cd-single-point.visited::after {
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .cd-single-point.is-open .cd-more-info.cd-left {
+    right: 140%;
+  }
+  .cd-single-point.is-open .cd-more-info.cd-right {
+    left: 140%;
+  }
+  .cd-single-point.is-open .cd-more-info.cd-top {
+    bottom: 140%;
+  }
+  .cd-single-point.is-open .cd-more-info.cd-bottom {
+    top: 140%;
+  }
+}
+
+@-moz-keyframes cd-pulse {
+  0% {
+    -moz-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0.8);
+  }
+
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0.8);
+  }
+
+  100% {
+    -moz-transform: scale(1.5);
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0);
+  }
+}
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0.8);
+  }
+
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0);
+  }
+}
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0.8);
+  }
+
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0.8);
+  }
+
+  to {
+    -webkit-transform: scale(1.5);
+    box-shadow: inset 0 0 1px 1px rgba(226, 148, 44, 0);
+  }
+}

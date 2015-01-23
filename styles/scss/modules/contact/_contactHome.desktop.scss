@@ -1,0 +1,34 @@
+.contacts-home {
+
+    .header {
+        .page-title {
+            text-align: left;
+            margin-left: 1rem;
+        }
+    }
+
+   .general-contact-actions {
+        .g-c-a-header {
+            margin-left: 1rem;
+            text-align: left;
+        }
+    }
+
+    .contact-card {
+
+        .contact-profile {
+            min-height: 90px;
+        }
+
+        .contact-actions {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .contact-action, .actns-full .columns {
+                padding-bottom: 1.2rem;
+                padding-top: 1.2rem;
+            }
+        }
+
+    }
+}

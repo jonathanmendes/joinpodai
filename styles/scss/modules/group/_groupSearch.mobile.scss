@@ -1,0 +1,29 @@
+.group-search{
+	.search-result{
+		height: 135px;
+
+		.search-result-square {
+			padding: 0;
+			width: 70px;
+		}
+
+		.search-result-name {
+			h3 {
+				font-size:1rem;
+			}
+		}
+
+		.search-result-request {
+			width: 100%;
+
+			.button {
+				float: left;
+			}
+		}
+	}
+
+	.search-result-last {
+		height: 120px;
+	}
+
+}
