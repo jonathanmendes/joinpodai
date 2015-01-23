@@ -1,0 +1,9 @@
+**.pyc
+**/.sass-cache
+**/.sass-cache/*
+.sass-cache
+.sass-cache/*
+main.css
+app/static/dev/styles/main.css
+app/static/dev/build/*
+/node_modules/*
